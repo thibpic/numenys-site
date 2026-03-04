@@ -4,198 +4,512 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Numenys – Conseil Data & Stratégie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --noir: #0d0d0d;
-    --anthracite: #1a1a2e;
-    --gris: #2e2e3e;
-    --accent: #4f8ef7;
-    --accent2: #7c5cbf;
-    --blanc: #f5f5f7;
-    --texte: #c8c8d8;
-    --card: #16162a;
+    --navy:       #06111f;
+    --navy-2:     #0b1e33;
+    --navy-3:     #112540;
+    --teal:       #00c2b8;
+    --teal-dim:   rgba(0,194,184,0.12);
+    --teal-mid:   rgba(0,194,184,0.25);
+    --gold:       #c9a04a;
+    --gold-dim:   rgba(201,160,74,0.15);
+    --blanc:      #f0f4f8;
+    --blanc-pur:  #ffffff;
+    --texte:      #8da0b3;
+    --texte-mid:  #b8c8d8;
+    --card-bg:    #0d2035;
+    --card-bord:  rgba(0,194,184,0.12);
+    --light-bg:   #f5f8fb;
+    --light-card: #ffffff;
+    --light-bord: #e2eaf2;
+    --dark-text:  #071a2b;
   }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--noir); color: var(--blanc); }
 
-  /* NAV */
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--navy);
+    color: var(--blanc);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─────────────────────────────────────────── */
   nav {
     position: fixed; top:0; width:100%; z-index:100;
     display:flex; justify-content:space-between; align-items:center;
-    padding: 1.2rem 5%;
-    background: rgba(13,13,13,0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(79,142,247,0.12);
+    padding: 1.4rem 6%;
+    background: rgba(6,17,31,0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0,194,184,0.1);
+    transition: padding .3s;
   }
-  .logo { font-size:1.5rem; font-weight:700; letter-spacing:2px; color:var(--blanc); }
-  .logo span { color: var(--accent); }
-  .nav-links { display:flex; gap:2rem; list-style:none; }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: var(--blanc-pur);
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--teal); }
+
+  .nav-links { display:flex; gap:2.5rem; list-style:none; }
   .nav-btn {
-    background:none; border:none; color:var(--texte); font-size:.9rem;
-    letter-spacing:.5px; cursor:pointer; font-family:inherit; transition:.2s; padding:0;
+    background:none; border:none; color:var(--texte-mid);
+    font-size: .875rem; letter-spacing: .5px;
+    cursor:pointer; font-family:inherit; transition:.2s;
+    padding:0; font-weight:400;
   }
-  .nav-btn:hover { color:var(--accent); }
+  .nav-btn:hover { color: var(--blanc-pur); }
+
   .nav-cta {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color:#fff; border:none; padding:.6rem 1.4rem; border-radius:6px;
-    font-size:.85rem; cursor:pointer; font-family:inherit; transition:.2s;
+    background: transparent;
+    border: 1.5px solid var(--teal);
+    color: var(--teal);
+    padding: .55rem 1.5rem;
+    border-radius: 50px;
+    font-size: .85rem;
+    font-weight: 500;
+    cursor:pointer;
+    font-family:inherit;
+    transition: .25s;
+    letter-spacing: .3px;
   }
-  .nav-cta:hover { opacity:.85; }
+  .nav-cta:hover {
+    background: var(--teal);
+    color: var(--navy);
+  }
 
-  /* HERO */
+  /* ─── HERO ────────────────────────────────────────── */
   #hero {
-    min-height:100vh; display:flex; align-items:center; justify-content:center;
-    text-align:center; padding: 6rem 5% 4rem;
-    background: radial-gradient(ellipse at 60% 40%, rgba(79,142,247,0.08) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 80%, rgba(124,92,191,0.07) 0%, transparent 50%),
-                var(--noir);
-  }
-  .hero-tag {
-    display:inline-block; font-size:.78rem; letter-spacing:2px; text-transform:uppercase;
-    color:var(--accent); border:1px solid rgba(79,142,247,0.35); border-radius:20px;
-    padding:.35rem 1rem; margin-bottom:1.8rem;
-  }
-  #hero h1 {
-    font-size: clamp(2.4rem, 5vw, 4rem); font-weight:700; line-height:1.15;
-    margin-bottom:1.4rem; letter-spacing:-1px;
-  }
-  #hero h1 span {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
-  }
-  #hero p { font-size:1.1rem; color:var(--texte); max-width:580px; margin:0 auto 2.5rem; line-height:1.7; }
-  .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-  .btn-primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color:#fff; padding:.85rem 2rem; border-radius:8px; border:none;
-    font-weight:600; font-size:.95rem; cursor:pointer; font-family:inherit; transition:.2s;
-  }
-  .btn-primary:hover { opacity:.85; transform:translateY(-1px); }
-  .btn-outline {
-    border:1px solid rgba(79,142,247,0.4); color:var(--blanc); padding:.85rem 2rem;
-    border-radius:8px; background:none; font-size:.95rem; cursor:pointer;
-    font-family:inherit; transition:.2s;
-  }
-  .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
-  .hero-stats { display:flex; gap:3rem; justify-content:center; margin-top:4rem; flex-wrap:wrap; }
-  .stat { text-align:center; }
-  .stat-num { font-size:2rem; font-weight:700; color:var(--accent); }
-  .stat-label { font-size:.8rem; color:var(--texte); text-transform:uppercase; letter-spacing:1px; margin-top:.2rem; }
-
-  /* SECTIONS */
-  section { padding: 5rem 5%; }
-  .section-tag { font-size:.75rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:.8rem; }
-  .section-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight:700; margin-bottom:1rem; letter-spacing:-.5px; }
-  .section-subtitle { color:var(--texte); max-width:580px; line-height:1.7; margin-bottom:3rem; }
-
-  /* ABOUT */
-  #about { background: var(--anthracite); }
-  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
-  .about-visual {
-    background: linear-gradient(135deg, var(--card), var(--gris));
-    border:1px solid rgba(79,142,247,0.15); border-radius:16px;
-    padding:3rem; text-align:center;
-  }
-  .avatar {
-    width:100px; height:100px; border-radius:50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    min-height: 100vh;
     display:flex; align-items:center; justify-content:center;
-    font-size:2.2rem; font-weight:700; margin:0 auto 1.2rem;
-  }
-  .about-name { font-size:1.3rem; font-weight:700; margin-bottom:.3rem; }
-  .about-role { color:var(--accent); font-size:.9rem; margin-bottom:1rem; }
-  .about-text p { color:var(--texte); line-height:1.8; margin-bottom:1rem; }
-  .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.5rem; }
-  .tag {
-    background:rgba(79,142,247,0.1); border:1px solid rgba(79,142,247,0.2);
-    color:var(--accent); font-size:.78rem; padding:.3rem .8rem; border-radius:20px;
+    text-align:center;
+    padding: 7rem 6% 5rem;
+    position: relative;
+    overflow: hidden;
+    background: var(--navy);
   }
 
-  /* SERVICES */
-  #services { background: var(--noir); }
-  .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
+  /* Grille de fond subtile */
+  #hero::before {
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(0,194,184,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,194,184,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black 40%, transparent 100%);
+  }
+
+  /* Lueurs d'ambiance */
+  #hero::after {
+    content:'';
+    position:absolute; inset:0;
+    background:
+      radial-gradient(ellipse 55% 50% at 70% 35%, rgba(0,194,184,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 75%, rgba(201,160,74,0.05) 0%, transparent 60%);
+    pointer-events:none;
+  }
+
+  .hero-inner { position:relative; z-index:2; max-width: 780px; }
+
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:.5rem;
+    font-size: .75rem; letter-spacing: 2.5px; text-transform:uppercase;
+    color: var(--teal); border: 1px solid rgba(0,194,184,0.3);
+    border-radius: 50px; padding: .4rem 1.2rem; margin-bottom: 2.2rem;
+    font-weight: 500;
+  }
+  .hero-badge::before {
+    content:''; width:6px; height:6px; border-radius:50%;
+    background: var(--teal); display:inline-block;
+  }
+
+  #hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.6rem;
+    color: var(--blanc-pur);
+  }
+  #hero h1 em {
+    font-style:normal;
+    color: var(--teal);
+  }
+
+  #hero p {
+    font-size: 1.1rem;
+    color: var(--texte-mid);
+    max-width: 540px;
+    margin: 0 auto 2.8rem;
+    line-height: 1.75;
+    font-weight: 300;
+  }
+
+  .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+  .btn-primary {
+    background: var(--teal);
+    color: var(--navy);
+    padding: .9rem 2.2rem;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor:pointer;
+    font-family:inherit;
+    transition: .2s;
+    letter-spacing: .2px;
+  }
+  .btn-primary:hover {
+    background: #00d9ce;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,194,184,0.3);
+  }
+
+  .btn-outline {
+    border: 1.5px solid rgba(240,244,248,0.25);
+    color: var(--blanc);
+    padding: .9rem 2.2rem;
+    border-radius: 50px;
+    background: none;
+    font-size: .9rem;
+    cursor:pointer;
+    font-family:inherit;
+    transition: .2s;
+    font-weight: 500;
+  }
+  .btn-outline:hover {
+    border-color: var(--blanc-pur);
+    color: var(--blanc-pur);
+  }
+
+  .hero-divider {
+    width: 1px; height: 40px;
+    background: linear-gradient(to bottom, transparent, rgba(0,194,184,0.4), transparent);
+    margin: 4rem auto 0;
+  }
+
+  .hero-stats {
+    display:flex; gap:3.5rem; justify-content:center;
+    margin-top: 1rem; flex-wrap:wrap;
+  }
+  .stat { text-align:center; }
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800;
+    color: var(--teal);
+    letter-spacing: -1px;
+  }
+  .stat-label {
+    font-size: .73rem; color: var(--texte);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-top: .25rem; font-weight: 500;
+  }
+
+  /* ─── SECTIONS COMMUNES ───────────────────────────── */
+  section { padding: 6rem 6%; }
+
+  .section-eyebrow {
+    font-size: .72rem; letter-spacing: 3px; text-transform: uppercase;
+    font-weight: 600; margin-bottom: .7rem;
+    display:flex; align-items:center; gap:.6rem;
+  }
+  .section-eyebrow::before {
+    content:''; width: 24px; height: 1.5px;
+    display:inline-block;
+  }
+  .dark-section .section-eyebrow { color: var(--teal); }
+  .dark-section .section-eyebrow::before { background: var(--teal); }
+  .light-section .section-eyebrow { color: var(--gold); }
+  .light-section .section-eyebrow::before { background: var(--gold); }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 1rem;
+  }
+  .dark-section .section-title { color: var(--blanc-pur); }
+  .light-section .section-title { color: var(--dark-text); }
+
+  .section-sub {
+    font-size: 1rem;
+    line-height: 1.75;
+    max-width: 540px;
+    margin-bottom: 3.5rem;
+  }
+  .dark-section .section-sub { color: var(--texte-mid); font-weight:300; }
+  .light-section .section-sub { color: #506070; }
+
+  /* ─── SECTION ABOUT (dark) ───────────────────────── */
+  #about { background: var(--navy-2); }
+  .dark-section { background: var(--navy-2); }
+
+  .about-grid {
+    display:grid; grid-template-columns: 380px 1fr;
+    gap: 5rem; align-items:center;
+    max-width: 1100px; margin: 0 auto;
+  }
+
+  .about-card {
+    background: var(--navy-3);
+    border: 1px solid var(--card-bord);
+    border-radius: 20px;
+    padding: 2.8rem 2.2rem;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .about-card::after {
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:3px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+  }
+
+  .avatar {
+    width: 90px; height: 90px; border-radius:50%;
+    background: linear-gradient(135deg, var(--teal), var(--gold));
+    display:flex; align-items:center; justify-content:center;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem; font-weight: 800; color: var(--navy);
+    margin: 0 auto 1.5rem;
+  }
+  .about-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem; font-weight: 700;
+    color: var(--blanc-pur); margin-bottom: .35rem;
+  }
+  .about-role {
+    font-size: .82rem; color: var(--teal);
+    font-weight: 500; letter-spacing: .5px;
+    margin-bottom: 1.5rem;
+  }
+  .about-sep {
+    width: 40px; height: 1.5px;
+    background: linear-gradient(90deg, var(--teal), var(--gold));
+    margin: 0 auto 1.5rem;
+  }
+  .about-location {
+    font-size: .78rem; color: var(--texte);
+    letter-spacing: 1px; text-transform: uppercase;
+  }
+
+  .about-text .section-eyebrow,
+  .about-text .section-title,
+  .about-text .section-sub { }
+
+  .about-text p {
+    color: var(--texte-mid);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: .95rem;
+    font-weight: 300;
+  }
+
+  .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1.8rem; }
+  .tag {
+    background: var(--teal-dim);
+    border: 1px solid rgba(0,194,184,0.22);
+    color: var(--teal);
+    font-size: .73rem; padding: .3rem .9rem;
+    border-radius: 50px; font-weight: 500;
+    letter-spacing: .3px;
+  }
+
+  /* ─── SECTION SERVICES (light) ───────────────────── */
+  #services {
+    background: var(--light-bg);
+  }
+  .light-section { background: var(--light-bg); }
+
+  .services-header { max-width: 1100px; margin: 0 auto; }
+  .services-grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+    max-width: 1100px; margin: 0 auto;
+  }
+
   .service-card {
-    background:var(--card); border:1px solid rgba(79,142,247,0.1);
-    border-radius:14px; padding:2rem; transition:.3s;
+    background: var(--light-card);
+    border: 1px solid var(--light-bord);
+    border-radius: 16px;
+    padding: 2rem 1.8rem;
+    transition: .3s;
     position:relative; overflow:hidden;
+    cursor:default;
+  }
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(6,17,31,0.1);
+    border-color: rgba(0,194,184,0.3);
   }
   .service-card::before {
-    content:''; position:absolute; top:0; left:0; right:0; height:2px;
-    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+    background: linear-gradient(to bottom, var(--teal), var(--gold));
     opacity:0; transition:.3s;
   }
-  .service-card:hover { border-color:rgba(79,142,247,0.3); transform:translateY(-4px); }
   .service-card:hover::before { opacity:1; }
-  .service-icon { font-size:2rem; margin-bottom:1rem; }
-  .service-title { font-size:1.1rem; font-weight:600; margin-bottom:.7rem; }
-  .service-desc { color:var(--texte); font-size:.9rem; line-height:1.7; }
 
-  /* APPROCHE */
-  #approche { background: var(--anthracite); }
-  .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; margin-top:3rem; }
+  .service-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--teal-dim);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom: 1.3rem;
+  }
+  .service-icon svg { width: 20px; height: 20px; stroke: var(--teal); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+
+  .service-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1rem; font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: .65rem;
+  }
+  .service-desc {
+    color: #5a7080; font-size: .875rem;
+    line-height: 1.72; font-weight: 400;
+  }
+
+  /* ─── SECTION APPROCHE (dark) ────────────────────── */
+  #approche { background: var(--navy); }
+
+  .approche-inner { max-width: 1100px; margin: 0 auto; }
+  .steps {
+    display:grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; margin-top: 3.5rem;
+    position:relative;
+  }
+  .steps::before {
+    content:'';
+    position:absolute; top: 28px; left:12.5%; right:12.5%;
+    height:1px; background: linear-gradient(90deg, var(--teal), var(--gold));
+    opacity: .3;
+  }
+
   .step { text-align:center; }
   .step-num {
-    width:52px; height:52px; border-radius:50%;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    width: 56px; height: 56px; border-radius: 50%;
+    border: 1.5px solid rgba(0,194,184,0.3);
     display:flex; align-items:center; justify-content:center;
-    font-weight:700; font-size:1.1rem; margin:0 auto 1rem;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800; font-size: 1rem;
+    color: var(--teal);
+    margin: 0 auto 1.3rem;
+    background: var(--navy-2);
+    position: relative; z-index:1;
+    transition:.3s;
   }
-  .step-title { font-weight:600; margin-bottom:.5rem; }
-  .step-desc { color:var(--texte); font-size:.88rem; line-height:1.6; }
+  .step:hover .step-num {
+    background: var(--teal); color: var(--navy);
+    border-color: var(--teal);
+  }
 
-  /* CONTACT */
-  #contact { background: var(--noir); }
-  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-  .contact-info { display:flex; flex-direction:column; gap:1.5rem; margin-top:2rem; }
+  .step-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700; font-size: .95rem;
+    color: var(--blanc-pur); margin-bottom: .5rem;
+  }
+  .step-desc {
+    color: var(--texte); font-size: .85rem;
+    line-height: 1.68; font-weight: 300;
+  }
+
+  /* ─── SECTION CONTACT (dark-2) ───────────────────── */
+  #contact { background: var(--navy-2); }
+
+  .contact-wrap { max-width: 1100px; margin: 0 auto; }
+  .contact-grid {
+    display:flex; justify-content:center;
+    gap: 5rem; align-items:start;
+    margin-top:3rem;
+  }
+
+  .contact-info { display:flex; flex-direction:column; gap: 1.2rem; }
   .contact-item {
-    display:flex; align-items:center; gap:1rem;
-    background:var(--card); border:1px solid rgba(79,142,247,0.1);
-    border-radius:12px; padding:1.2rem 1.5rem;
+    display:flex; align-items:center; gap:1.1rem;
+    background: var(--navy-3);
+    border: 1px solid var(--card-bord);
+    border-radius: 14px; padding: 1.1rem 1.4rem;
+    transition:.2s;
   }
+  .contact-item:hover { border-color: rgba(0,194,184,0.3); }
+
   .contact-item-icon {
-    width:40px; height:40px; border-radius:8px;
-    background: linear-gradient(135deg, rgba(79,142,247,.2), rgba(124,92,191,.2));
-    display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;
+    width: 38px; height: 38px; border-radius: 9px;
+    background: var(--teal-dim);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
   }
-  .contact-item-label { font-size:.75rem; color:var(--texte); text-transform:uppercase; letter-spacing:1px; }
-  .contact-item-value { font-size:.95rem; color:var(--blanc); margin-top:.15rem; }
-  .contact-form { background:var(--card); border:1px solid rgba(79,142,247,0.1); border-radius:16px; padding:2.5rem; }
-  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
-  .form-group { margin-bottom:1.2rem; }
-  .form-group label { display:block; font-size:.82rem; color:var(--texte); margin-bottom:.5rem; }
-  .form-group input, .form-group textarea {
-    width:100%; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
-    border-radius:8px; padding:.75rem 1rem; color:var(--blanc); font-size:.9rem;
-    font-family:inherit; transition:.2s; outline:none;
-  }
-  .form-group input:focus, .form-group textarea:focus { border-color:var(--accent); background:rgba(79,142,247,.06); }
-  .form-group textarea { resize:vertical; min-height:120px; }
-  .btn-submit {
-    width:100%; background: linear-gradient(135deg, var(--accent), var(--accent2));
-    color:#fff; border:none; padding:1rem; border-radius:8px;
-    font-size:.95rem; font-weight:600; cursor:pointer; transition:.2s; font-family:inherit;
-  }
-  .btn-submit:hover { opacity:.85; }
+  .contact-item-icon svg { width:17px; height:17px; stroke: var(--teal); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
 
-  /* FOOTER */
+  .contact-item-label {
+    font-size: .7rem; color: var(--texte);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    font-weight: 500;
+  }
+  .contact-item-value { font-size: .9rem; color: var(--blanc-pur); margin-top: .15rem; }
+
+
+  /* ─── FOOTER ──────────────────────────────────────── */
   footer {
-    background:var(--anthracite); border-top:1px solid rgba(79,142,247,0.1);
-    padding:2rem 5%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+    background: var(--navy);
+    border-top: 1px solid rgba(0,194,184,0.08);
+    padding: 2rem 6%;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap: 1rem;
   }
-  .footer-logo { font-size:1.2rem; font-weight:700; letter-spacing:2px; }
-  .footer-logo span { color:var(--accent); }
-  .footer-text { color:var(--texte); font-size:.82rem; }
+  .footer-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.1rem; font-weight: 800;
+    letter-spacing: 3px; color: var(--blanc-pur);
+    text-transform: uppercase;
+  }
+  .footer-logo span { color: var(--teal); }
+  .footer-text { color: var(--texte); font-size: .8rem; }
+  .footer-loc {
+    font-size: .78rem; color: var(--gold);
+    font-weight: 500; letter-spacing: .5px;
+  }
 
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 960px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .steps::before { display:none; }
+    .about-grid { grid-template-columns: 1fr; }
+  }
   @media (max-width: 768px) {
-    .about-grid, .contact-grid { grid-template-columns:1fr; }
-    .form-row { grid-template-columns:1fr; }
+    .about-grid { grid-template-columns:1fr; gap:2.5rem; }
+    .contact-grid { flex-direction:column; align-items:center; gap:2.5rem; }
+    .services-grid { grid-template-columns:1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display:none; }
-    .hero-stats { gap:1.5rem; }
+    .hero-stats { gap: 2rem; }
+    section { padding: 4rem 5%; }
+    nav { padding: 1.2rem 5%; }
   }
 </style>
 </head>
 <body>
 
+<!-- ── NAV ── -->
 <nav>
   <div class="logo">NUM<span>E</span>NYS</div>
   <ul class="nav-links">
@@ -207,32 +521,46 @@
   <button class="nav-cta" onclick="go('contact')">Prendre contact</button>
 </nav>
 
+<!-- ── HERO ── -->
 <section id="hero">
-  <div>
-    <div class="hero-tag">Conseil Data &amp; Stratégie</div>
-    <h1>Transformez votre donnée<br>en <span>avantage compétitif</span></h1>
+  <div class="hero-inner">
+    <div class="hero-badge">Conseil Data &amp; Stratégie</div>
+    <h1>Transformez votre donnée<br>en <em>avantage compétitif</em></h1>
     <p>Numenys accompagne les entreprises dans leurs projets data : de la stratégie à l'exécution, du diagnostic à la mise en œuvre opérationnelle.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="go('services')">Découvrir les services</button>
       <button class="btn-outline" onclick="go('contact')">Nous contacter</button>
     </div>
+    <div class="hero-divider"></div>
     <div class="hero-stats">
-      <div class="stat"><div class="stat-num">Data</div><div class="stat-label">Analyse & BI</div></div>
-      <div class="stat"><div class="stat-num">360°</div><div class="stat-label">Vision stratégique</div></div>
-      <div class="stat"><div class="stat-num">On-site</div><div class="stat-label">Management de transition</div></div>
+      <div class="stat">
+        <div class="stat-num">Data</div>
+        <div class="stat-label">Analyse & BI</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">360°</div>
+        <div class="stat-label">Vision stratégique</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">On-site</div>
+        <div class="stat-label">Management de transition</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="about">
+<!-- ── ABOUT ── -->
+<section id="about" class="dark-section">
   <div class="about-grid">
-    <div class="about-visual">
+    <div class="about-card">
       <div class="avatar">TP</div>
       <div class="about-name">Thibaut Picard Destelan</div>
       <div class="about-role">Fondateur — Numenys</div>
+      <div class="about-sep"></div>
+      <div class="about-location">Paris - Tours - France</div>
     </div>
     <div class="about-text">
-      <div class="section-tag">À propos</div>
+      <div class="section-eyebrow">À propos</div>
       <h2 class="section-title">Conseil expert,<br>approche sur mesure</h2>
       <p>Numenys est une société de conseil indépendante fondée par Thibaut Picard Destelan, expert en stratégie data et management IT.</p>
       <p>Fort d'une expérience terrain auprès d'organisations de toutes tailles, Numenys intervient comme partenaire de confiance pour structurer, piloter et valoriser vos projets data — de l'audit initial jusqu'à la livraison opérationnelle.</p>
@@ -249,141 +577,165 @@
   </div>
 </section>
 
-<section id="services">
-  <div class="section-tag">Services</div>
-  <h2 class="section-title">Une offre complète autour de la donnée</h2>
-  <p class="section-subtitle">De la définition de votre vision data jusqu'à l'exécution opérationnelle, Numenys intervient à chaque étape de votre transformation.</p>
+<!-- ── SERVICES ── -->
+<section id="services" class="light-section">
+  <div class="services-header">
+    <div class="section-eyebrow">Services</div>
+    <h2 class="section-title">Une offre complète autour de la donnée</h2>
+    <p class="section-sub">De la définition de votre vision data jusqu'à l'exécution opérationnelle, Numenys intervient à chaque étape de votre transformation.</p>
+  </div>
   <div class="services-grid">
+
     <div class="service-card">
-      <div class="service-icon">📊</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17.5h7M17.5 14v7"/></svg>
+      </div>
       <div class="service-title">Data Analyse</div>
       <div class="service-desc">Exploitation et valorisation de vos données pour produire des insights actionnables. Modélisation, analyse exploratoire, reporting et visualisation.</div>
     </div>
+
     <div class="service-card">
-      <div class="service-icon">🖥️</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><polyline points="7,8 10,11 13,8 16,11"/></svg>
+      </div>
       <div class="service-title">Business Intelligence</div>
       <div class="service-desc">Conception et déploiement de vos outils BI : dashboards, indicateurs de performance, architecture de reporting adaptée à vos métiers.</div>
     </div>
+
     <div class="service-card">
-      <div class="service-icon">🧭</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+      </div>
       <div class="service-title">Stratégie Data</div>
       <div class="service-desc">Définition de votre feuille de route data : gouvernance, organisation, choix technologiques et alignement avec les objectifs business.</div>
     </div>
+
     <div class="service-card">
-      <div class="service-icon">🔄</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
       <div class="service-title">Management de transition</div>
       <div class="service-desc">Intervention opérationnelle en tant que manager data ou DSI de transition pour assurer la continuité et la montée en maturité de vos équipes.</div>
     </div>
+
     <div class="service-card">
-      <div class="service-icon">🎯</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
       <div class="service-title">Pilotage de projets Data</div>
       <div class="service-desc">Cadrage, coordination et suivi de vos projets data de bout en bout. Méthodes agiles et adaptées à la réalité terrain de votre organisation.</div>
     </div>
+
     <div class="service-card">
-      <div class="service-icon">🔍</div>
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+      </div>
       <div class="service-title">Diagnostic & Recommandations</div>
       <div class="service-desc">Audit de votre maturité data, identification des axes d'amélioration prioritaires et plan d'action concret pour progresser efficacement.</div>
     </div>
+
   </div>
 </section>
 
+<!-- ── APPROCHE ── -->
 <section id="approche">
-  <div class="section-tag">Approche</div>
-  <h2 class="section-title">Une méthode en 4 étapes</h2>
-  <p class="section-subtitle">Chaque mission débute par une écoute approfondie et se conclut par des livrables concrets, ancrés dans la réalité de votre organisation.</p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <div class="step-title">Diagnostic</div>
-      <div class="step-desc">Audit de l'existant, compréhension des enjeux métiers et identification des leviers à activer.</div>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <div class="step-title">Stratégie</div>
-      <div class="step-desc">Co-construction d'une feuille de route réaliste, priorisée et alignée sur vos objectifs.</div>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <div class="step-title">Exécution</div>
-      <div class="step-desc">Pilotage et mise en œuvre opérationnelle, en immersion avec vos équipes.</div>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <div class="step-title">Transfert</div>
-      <div class="step-desc">Montée en autonomie de vos équipes et pérennisation des acquis après la mission.</div>
+  <div class="approche-inner">
+    <div class="section-eyebrow">Approche</div>
+    <h2 class="section-title">Une méthode en 4 étapes</h2>
+    <p class="section-sub">Chaque mission débute par une écoute approfondie et se conclut par des livrables concrets, ancrés dans la réalité de votre organisation.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Diagnostic</div>
+        <div class="step-desc">Audit de l'existant, compréhension des enjeux métiers et identification des leviers à activer.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Stratégie</div>
+        <div class="step-desc">Co-construction d'une feuille de route réaliste, priorisée et alignée sur vos objectifs.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">Exécution</div>
+        <div class="step-desc">Pilotage et mise en œuvre opérationnelle, en immersion avec vos équipes.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Transfert</div>
+        <div class="step-desc">Montée en autonomie de vos équipes et pérennisation des acquis après la mission.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <div class="contact-grid">
-    <div>
-      <div class="section-tag">Contact</div>
-      <h2 class="section-title">Parlons de votre projet</h2>
-      <p class="section-subtitle">Vous avez un projet data, une problématique à résoudre ou souhaitez simplement échanger ? Contactez Thibaut directement.</p>
+<!-- ── CONTACT ── -->
+<section id="contact" class="dark-section">
+  <div class="contact-wrap">
+    <div class="section-eyebrow">Contact</div>
+    <h2 class="section-title">Parlons de votre projet</h2>
+    <p class="section-sub">Vous avez un projet data, une problématique à résoudre ou souhaitez simplement échanger ? Contactez Thibaut directement.</p>
+
+    <div class="contact-grid">
       <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-item-icon">📧</div>
-          <div>
-            <div class="contact-item-label">Email</div>
-            <div class="contact-item-value">thibaut@numenys.fr</div>
+        <a href="mailto:thibaut@numenys.fr" style="text-decoration:none; color:inherit;">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">thibaut@numenys.fr</div>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">📞</div>
-          <div>
-            <div class="contact-item-label">Téléphone</div>
-            <div class="contact-item-value">06 81 96 47 70</div>
+        </a>
+        <a href="tel:+33681964770" style="text-decoration:none; color:inherit;">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2.7h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.3a16 16 0 0 0 5.8 5.8l1.86-1.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Téléphone</div>
+              <div class="contact-item-value">06 81 96 47 70</div>
+            </div>
           </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">🔗</div>
-          <div>
-            <div class="contact-item-label">LinkedIn</div>
-            <div class="contact-item-value">Thibaut Picard Destelan</div>
+        </a>
+        <a href="https://linkedin.com/in/thibaut-picard-destelan" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">LinkedIn</div>
+              <div class="contact-item-value">Thibaut Picard Destelan</div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-form">
-      <h3 style="margin-bottom:1.5rem; font-size:1.15rem;">Envoyer un message</h3>
-      <div class="form-row">
-        <div class="form-group">
-          <label>Prénom</label>
-          <input type="text" placeholder="Jean">
-        </div>
-        <div class="form-group">
-          <label>Nom</label>
-          <input type="text" placeholder="Dupont">
-        </div>
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="jean.dupont@entreprise.fr">
-      </div>
-      <div class="form-group">
-        <label>Sujet</label>
-        <input type="text" placeholder="Votre projet ou demande">
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Décrivez votre projet, contexte ou question..."></textarea>
-      </div>
-      <button class="btn-submit" onclick="this.textContent='Message envoyé ✓'; this.style.background='#2d7a4f'; setTimeout(()=>{this.textContent='Envoyer le message'; this.style.background='';},3000)">Envoyer le message</button>
-    </div>
+        </a>
+        <a href="https://www.malt.fr/profile/thibautpicarddestelan" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:inherit;">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12a4 4 0 0 1 8 0M12 7v10M7 12h10"/></svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Malt</div>
+              <div class="contact-item-value">thibautpicarddestelan</div>
+            </div>
+          </div>
+        </a>
+      </div>    </div>
   </div>
 </section>
 
+<!-- ── FOOTER ── -->
 <footer>
   <div class="footer-logo">NUM<span>E</span>NYS</div>
   <div class="footer-text">© 2025 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
-  <div class="footer-text" style="color:var(--accent); font-size:.8rem;">Paris, France</div>
+  <div class="footer-loc">Paris - Tours - France</div>
 </footer>
 
 <script>
   function go(id) {
     var el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
   }
 </script>
 </body>
