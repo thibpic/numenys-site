@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
+  </style>
+</defs>
+
+<!-- Fond sombre -->
+<rect width="200" height="200" fill="#14161a"/>
+
+<!--
+  Icône : cube filaire en projection axonométrique
+  Centre du cube : (100, 78)
+  Les 8 sommets projetés :
+    Haut-gauche-avant  hga = (78, 55)
+    Haut-droite-avant  hda = (122, 55)
+    Bas-droite-avant   bda = (122, 88)
+    Bas-gauche-avant   bga = (78, 88)
+    Haut-gauche-arr.   hgar= (65, 42)
+    Haut-droite-arr.   hdar= (109, 42)
+    Bas-droite-arr.    bdar= (109, 75)
+    Bas-gauche-arr.    bgar= (65, 75)
+-->
+
+<!-- Arêtes arrière (plus sobres) -->
+<g stroke="#c8b48a" stroke-width="1" opacity="0.3" fill="none">
+  <line x1="65" y1="42" x2="109" y2="42"/>
+  <line x1="65" y1="42" x2="65" y2="75"/>
+  <line x1="109" y1="42" x2="109" y2="75"/>
+  <line x1="65" y1="75" x2="109" y2="75"/>
+</g>
+
+<!-- Arêtes de liaison arrière-avant (piliers) -->
+<g stroke="#c8b48a" stroke-width="1" opacity="0.4" fill="none">
+  <line x1="65" y1="42" x2="78" y2="55"/>
+  <line x1="109" y1="42" x2="122" y2="55"/>
+  <line x1="109" y1="75" x2="122" y2="88"/>
+  <line x1="65" y1="75" x2="78"  y2="88"/>
+</g>
+
+<!-- Arêtes avant (face principale, plus nettes) -->
+<g stroke="#c8b48a" stroke-width="1.6" opacity="0.9" fill="none">
+  <line x1="78"  y1="55" x2="122" y2="55"/>
+  <line x1="122" y1="55" x2="122" y2="88"/>
+  <line x1="122" y1="88" x2="78"  y2="88"/>
+  <line x1="78"  y1="88" x2="78"  y2="55"/>
+</g>
+
+<!-- Nœuds arrière (petits) -->
+<g fill="#c8b48a" opacity="0.4">
+  <circle cx="65"  cy="42" r="2.5"/>
+  <circle cx="109" cy="42" r="2.5"/>
+  <circle cx="109" cy="75" r="2.5"/>
+  <circle cx="65"  cy="75" r="2.5"/>
+</g>
+
+<!-- Nœuds avant (principaux) -->
+<g fill="#c8b48a" opacity="0.95">
+  <circle cx="78"  cy="55" r="3.5"/>
+  <circle cx="122" cy="55" r="3.5"/>
+  <circle cx="122" cy="88" r="3.5"/>
+  <circle cx="78"  cy="88" r="3.5"/>
+</g>
+
+<!-- Texte NUMENYS -->
+<text
+  x="100" y="148"
+  font-family="'Cormorant Garamond', Georgia, serif"
+  font-size="30"
+  font-weight="600"
+  letter-spacing="4"
+  text-anchor="middle"
+  fill="#f8f6f2">NUMEN<tspan fill="#c8b48a">YS</tspan></text>
+
+<!-- Ligne décorative sous le texte -->
+<line x1="68" y1="156" x2="132" y2="156" stroke="#c8b48a" stroke-width="0.8" opacity="0.5"/>
+
+</svg>
