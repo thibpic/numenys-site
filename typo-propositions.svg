@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="510" viewBox="0 0 1400 510">
+  <style><![CDATA[
+    @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,600&family=Cormorant+SC:wght@600&family=Spectral:wght@600&family=Crimson+Pro:wght@600&family=Lora:wght@600&family=Montserrat:wght@600&family=Jost:wght@500&family=Urbanist:wght@600&family=Space+Grotesk:wght@500&family=DM+Sans:opsz,wght@9..40,500&family=Inter:wght@300;400;500&display=swap');
+  ]]></style>
+
+  <!-- Background -->
+  <rect width="1400" height="510" fill="#0e1013"/>
+
+  <!-- Title -->
+  <text x="700" y="34" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="3.5" text-anchor="middle" fill="#8a8a7e">PROPOSITIONS TYPOGRAPHIQUES — DANS L'ESPRIT DES POLICES 04–07</text>
+  <line x1="560" y1="42" x2="840" y2="42" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════
+       ROW 1 — cards 01 to 05
+  ═══════════════════════════════════════════════ -->
+
+  <!-- CARD 01 — Bodoni Moda -->
+  <rect x="20"  y="56" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="150" y="118" font-family="'Bodoni Moda', serif" font-size="38" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="150" y="148" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="60"  y1="170" x2="240" y2="170" stroke="#2a2d35" stroke-width="1"/>
+  <text x="150" y="192" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">BODONI MODA</text>
+  <text x="150" y="212" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">serif · haute couture · luxe</text>
+  <rect x="20"  y="56" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 02 — Cormorant SC -->
+  <rect x="295" y="56" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="425" y="118" font-family="'Cormorant SC', serif" font-size="36" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="425" y="148" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="335" y1="170" x2="515" y2="170" stroke="#2a2d35" stroke-width="1"/>
+  <text x="425" y="192" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">CORMORANT SC</text>
+  <text x="425" y="212" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">serif · petites capitales · prestige</text>
+  <rect x="295" y="56" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 03 — Spectral -->
+  <rect x="570" y="56" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="700" y="118" font-family="'Spectral', serif" font-size="38" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="700" y="148" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="610" y1="170" x2="790" y2="170" stroke="#2a2d35" stroke-width="1"/>
+  <text x="700" y="192" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">SPECTRAL</text>
+  <text x="700" y="212" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">serif · éditorial · contemporain</text>
+  <rect x="570" y="56" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 04 — Crimson Pro -->
+  <rect x="845" y="56" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="975" y="118" font-family="'Crimson Pro', serif" font-size="40" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="975" y="148" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="885" y1="170" x2="1065" y2="170" stroke="#2a2d35" stroke-width="1"/>
+  <text x="975" y="192" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">CRIMSON PRO</text>
+  <text x="975" y="212" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">serif · académique · élégant</text>
+  <rect x="845" y="56" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 05 — Lora -->
+  <rect x="1120" y="56" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="1250" y="118" font-family="'Lora', serif" font-size="38" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="1250" y="148" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="1160" y1="170" x2="1340" y2="170" stroke="#2a2d35" stroke-width="1"/>
+  <text x="1250" y="192" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">LORA</text>
+  <text x="1250" y="212" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">serif · chaleureux · littéraire</text>
+  <rect x="1120" y="56" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════════════════════
+       ROW 2 — cards 06 to 10
+  ═══════════════════════════════════════════════ -->
+
+  <!-- CARD 06 — Montserrat -->
+  <rect x="20"  y="274" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="150" y="336" font-family="'Montserrat', sans-serif" font-size="32" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="150" y="364" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="60"  y1="386" x2="240" y2="386" stroke="#2a2d35" stroke-width="1"/>
+  <text x="150" y="408" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">MONTSERRAT</text>
+  <text x="150" y="428" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">sans-serif · géométrique · classique</text>
+  <rect x="20"  y="274" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 07 — Jost -->
+  <rect x="295" y="274" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="425" y="336" font-family="'Jost', sans-serif" font-size="34" font-weight="500" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="425" y="364" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="335" y1="386" x2="515" y2="386" stroke="#2a2d35" stroke-width="1"/>
+  <text x="425" y="408" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">JOST</text>
+  <text x="425" y="428" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">sans-serif · moderne · épuré</text>
+  <rect x="295" y="274" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 08 — Urbanist -->
+  <rect x="570" y="274" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="700" y="336" font-family="'Urbanist', sans-serif" font-size="34" font-weight="600" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="700" y="364" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="610" y1="386" x2="790" y2="386" stroke="#2a2d35" stroke-width="1"/>
+  <text x="700" y="408" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">URBANIST</text>
+  <text x="700" y="428" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">sans-serif · minimaliste · luxe</text>
+  <rect x="570" y="274" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 09 — Space Grotesk -->
+  <rect x="845" y="274" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="975" y="336" font-family="'Space Grotesk', sans-serif" font-size="30" font-weight="500" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="975" y="364" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="885" y1="386" x2="1065" y2="386" stroke="#2a2d35" stroke-width="1"/>
+  <text x="975" y="408" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">SPACE GROTESK</text>
+  <text x="975" y="428" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">sans-serif · distinctif · tech élégant</text>
+  <rect x="845" y="274" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- CARD 10 — DM Sans -->
+  <rect x="1120" y="274" width="260" height="198" rx="4" fill="#14161a"/>
+  <text x="1250" y="336" font-family="'DM Sans', sans-serif" font-size="34" font-weight="500" text-anchor="middle">
+    <tspan fill="#ede9e1">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan>
+  </text>
+  <text x="1250" y="364" font-family="Inter, sans-serif" font-size="10" font-weight="300" fill="#8a8a7e" text-anchor="middle" font-style="italic">Conseil &amp; Stratégie Data</text>
+  <line x1="1160" y1="386" x2="1340" y2="386" stroke="#2a2d35" stroke-width="1"/>
+  <text x="1250" y="408" font-family="Inter, sans-serif" font-size="10" font-weight="500" letter-spacing="2" text-anchor="middle" fill="#c8b48a">DM SANS</text>
+  <text x="1250" y="428" font-family="Inter, sans-serif" font-size="9" font-weight="300" text-anchor="middle" fill="#55544e">sans-serif · neutre · contemporain</text>
+  <rect x="1120" y="274" width="260" height="198" rx="4" fill="none" stroke="#2a2d35" stroke-width="1"/>
+
+  <!-- Row labels -->
+  <text x="20" y="492" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#3a3d45" letter-spacing="1">01–05  SERIFS À CARACTÈRE</text>
+  <text x="570" y="492" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#3a3d45" letter-spacing="1" text-anchor="middle">06–10  SANS-SERIFS GÉOMÉTRIQUES &amp; ÉPURÉS</text>
+
+</svg>

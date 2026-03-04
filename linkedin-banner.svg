@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;500&display=swap');
+  </style>
+  <radialGradient id="g1" cx="55%" cy="50%" r="55%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#c8b48a" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="#14161a" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="g2" cx="12%" cy="85%" r="30%" gradientUnits="objectBoundingBox">
+    <stop offset="0%"   stop-color="#c8b48a" stop-opacity="0.04"/>
+    <stop offset="100%" stop-color="#14161a" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="sep" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#c8b48a" stop-opacity="0"/>
+    <stop offset="25%"  stop-color="#c8b48a" stop-opacity="0.22"/>
+    <stop offset="75%"  stop-color="#c8b48a" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#c8b48a" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+
+<!-- Fond -->
+<rect width="1584" height="396" fill="#14161a"/>
+<rect width="1584" height="396" fill="url(#g1)"/>
+<rect width="1584" height="396" fill="url(#g2)"/>
+
+<!-- ── Cube centré à x=148, y=188, scale 2.2
+     translate = (148 - 32*2.2,  188 - 32.5*2.2) = (77.6, 116.5) -->
+<g transform="translate(77.6, 116.5) scale(2.2)" fill="none">
+  <g stroke="#c8b48a" stroke-width="0.5" opacity="0.25" stroke-linecap="round">
+    <line x1="8"  y1="13" x2="45" y2="13"/>
+    <line x1="8"  y1="13" x2="8"  y2="41"/>
+    <line x1="45" y1="13" x2="45" y2="41"/>
+    <line x1="8"  y1="41" x2="45" y2="41"/>
+  </g>
+  <g stroke="#c8b48a" stroke-width="0.5" opacity="0.40" stroke-linecap="round">
+    <line x1="8"  y1="13" x2="19" y2="24"/>
+    <line x1="45" y1="13" x2="56" y2="24"/>
+    <line x1="45" y1="41" x2="56" y2="52"/>
+    <line x1="8"  y1="41" x2="19" y2="52"/>
+  </g>
+  <rect x="19" y="24" width="37" height="28"
+        stroke="#c8b48a" stroke-width="0.85" opacity="0.95"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#c8b48a" opacity="0.28">
+    <circle cx="8"  cy="13" r="1.1"/>
+    <circle cx="45" cy="13" r="1.1"/>
+    <circle cx="45" cy="41" r="1.1"/>
+    <circle cx="8"  cy="41" r="1.1"/>
+  </g>
+  <g fill="#c8b48a" opacity="0.95">
+    <circle cx="19" cy="24" r="1.4"/>
+    <circle cx="56" cy="24" r="1.4"/>
+    <circle cx="56" cy="52" r="1.4"/>
+    <circle cx="19" cy="52" r="1.4"/>
+  </g>
+</g>
+<!-- Cube right edge ≈ 77.6 + 56×2.2 = 201 → texte à x=228 -->
+
+<!-- ── NUMENYS — tspan pour éviter tout décalage ── -->
+<text
+  x="228" y="195"
+  font-family="'Cormorant Garamond', Georgia, serif"
+  font-size="68" font-weight="600" letter-spacing="4"><tspan fill="#f8f6f2">NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+
+<!-- ── Tagline ligne 1 : thèmes principaux ─────── -->
+<text
+  x="230" y="224"
+  font-family="'Inter', system-ui, sans-serif"
+  font-size="12" font-weight="500" letter-spacing="2.5"
+  fill="#c8b48a" opacity="0.85">EXPERTISE  ·  STRATÉGIE  ·  TRANSITION</text>
+
+<!-- ── Tagline ligne 2 : sous-thèmes ────────────── -->
+<text
+  x="230" y="244"
+  font-family="'Inter', system-ui, sans-serif"
+  font-size="11" font-weight="300" letter-spacing="0.3"
+  fill="#aaa9a0" opacity="0.75">Data &amp; Analytics  ·  Conseil &amp; Feuille de route  ·  Management opérationnel</text>
+
+
+<!-- ── Séparateur vertical ──────────────────────── -->
+<rect x="778" y="0" width="1" height="396" fill="url(#sep)"/>
+
+
+<!-- ── Bloc droit ───────────────────────────────────
+     Nom 42px  → baseline y=185, cap top ≈ 155
+     Rôle 13px → y=212
+     Filet     → y=228
+     Lieu 11px → y=245
+     Centre bloc ≈ (155+253)/2 = 204 ≈ 198 ✓         -->
+
+<text
+  x="828" y="185"
+  font-family="'Cormorant Garamond', Georgia, serif"
+  font-size="42" font-weight="600" letter-spacing="0.5"
+  fill="#f8f6f2">Thibaut Picard Destelan</text>
+
+<text
+  x="830" y="212"
+  font-family="'Inter', system-ui, sans-serif"
+  font-size="13" font-weight="300" letter-spacing="0.3"
+  fill="#aaa9a0">Fondateur — Numenys</text>
+
+<line x1="830" y1="228" x2="1080" y2="228" stroke="#c8b48a" stroke-width="0.8" opacity="0.28"/>
+
+<text
+  x="830" y="247"
+  font-family="'Inter', system-ui, sans-serif"
+  font-size="11" font-weight="500" letter-spacing="2.5"
+  fill="#c8b48a" opacity="0.6">PARIS  ·  TOURS  ·  FRANCE</text>
+
+</svg>

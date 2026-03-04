@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=DM+Serif+Display&family=Fraunces:opsz,wght@9..144,600&family=Josefin+Sans:wght@600&family=Libre+Baskerville:wght@700&family=Playfair+Display:wght@600&family=Raleway:wght@600&family=Inter:wght@300;400;500&display=swap');
+  </style>
+  <clipPath id="cp0"><rect x="34"   y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp1"><rect x="226"  y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp2"><rect x="418"  y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp3"><rect x="610"  y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp4"><rect x="802"  y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp5"><rect x="994"  y="50" width="180" height="248" rx="3"/></clipPath>
+  <clipPath id="cp6"><rect x="1186" y="50" width="180" height="248" rx="3"/></clipPath>
+</defs>
+
+<!-- Fond page -->
+<rect width="1400" height="650" fill="#0c0c0c"/>
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SECTION 1 — PALETTES                                     -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<text x="34" y="32" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" letter-spacing="3" fill="#4a4a42">— PALETTES DE COULEUR</text>
+
+<!-- ── Palette 01 : Ardoise & Or (actuelle) ── -->
+<g clip-path="url(#cp0)">
+  <rect x="34"  y="50"  width="180" height="155" fill="#14161a"/>
+  <rect x="34"  y="205" width="180" height="93"  fill="#f4f2ef"/>
+  <rect x="34"  y="203" width="180" height="2"   fill="#c8b48a" opacity="0.3"/>
+  <!-- swatches -->
+  <rect x="52"  y="62"  width="42" height="10" fill="#14161a" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="100" y="62"  width="42" height="10" fill="#c8b48a"/>
+  <rect x="148" y="62"  width="42" height="10" fill="#f4f2ef" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <!-- brand dark -->
+  <text x="124" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#c8b48a" text-anchor="middle">NUMENYS</text>
+  <text x="124" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#c8b48a" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="88" y1="143" x2="160" y2="143" stroke="#c8b48a" stroke-width="0.6" opacity="0.25"/>
+  <!-- light section -->
+  <text x="52"  y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#1a1714" opacity="0.75">Expertise · Stratégie</text>
+  <text x="52"  y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#6a6a62">Conseil &amp; Feuille de route</text>
+  <rect x="52"  y="256" width="24" height="1" fill="#c8b48a" opacity="0.4"/>
+</g>
+<rect x="34"  y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<!-- badge actuelle -->
+<rect x="152" y="54" width="56" height="16" rx="2" fill="#c8b48a" opacity="0.15"/>
+<text x="180" y="65" font-family="'Inter',sans-serif" font-size="7.5" font-weight="500" letter-spacing="1" fill="#c8b48a" text-anchor="middle">ACTUELLE</text>
+<!-- label -->
+<text x="124" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">01 — Ardoise &amp; Or</text>
+
+<!-- ── Palette 02 : Charbon & Cuivre ── -->
+<g clip-path="url(#cp1)">
+  <rect x="226" y="50"  width="180" height="155" fill="#1a1410"/>
+  <rect x="226" y="205" width="180" height="93"  fill="#f5efea"/>
+  <rect x="226" y="203" width="180" height="2"   fill="#c4703a" opacity="0.3"/>
+  <rect x="244" y="62"  width="42" height="10" fill="#1a1410" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="292" y="62"  width="42" height="10" fill="#c4703a"/>
+  <rect x="340" y="62"  width="42" height="10" fill="#f5efea" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="316" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#c4703a" text-anchor="middle">NUMENYS</text>
+  <text x="316" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#c4703a" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="280" y1="143" x2="352" y2="143" stroke="#c4703a" stroke-width="0.6" opacity="0.25"/>
+  <text x="244" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#1c1208" opacity="0.75">Expertise · Stratégie</text>
+  <text x="244" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#6a5a50">Conseil &amp; Feuille de route</text>
+  <rect x="244" y="256" width="24" height="1" fill="#c4703a" opacity="0.4"/>
+</g>
+<rect x="226" y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="316" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">02 — Charbon &amp; Cuivre</text>
+
+<!-- ── Palette 03 : Graphite & Bordeaux ── -->
+<g clip-path="url(#cp2)">
+  <rect x="418" y="50"  width="180" height="155" fill="#191215"/>
+  <rect x="418" y="205" width="180" height="93"  fill="#f5f0f2"/>
+  <rect x="418" y="203" width="180" height="2"   fill="#a83855" opacity="0.3"/>
+  <rect x="436" y="62"  width="42" height="10" fill="#191215" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="484" y="62"  width="42" height="10" fill="#a83855"/>
+  <rect x="532" y="62"  width="42" height="10" fill="#f5f0f2" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="508" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#a83855" text-anchor="middle">NUMENYS</text>
+  <text x="508" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#a83855" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="472" y1="143" x2="544" y2="143" stroke="#a83855" stroke-width="0.6" opacity="0.25"/>
+  <text x="436" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#191015" opacity="0.75">Expertise · Stratégie</text>
+  <text x="436" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#6a5a60">Conseil &amp; Feuille de route</text>
+  <rect x="436" y="256" width="24" height="1" fill="#a83855" opacity="0.4"/>
+</g>
+<rect x="418" y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="508" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">03 — Graphite &amp; Bordeaux</text>
+
+<!-- ── Palette 04 : Nuit & Sauge ── -->
+<g clip-path="url(#cp3)">
+  <rect x="610" y="50"  width="180" height="155" fill="#14191a"/>
+  <rect x="610" y="205" width="180" height="93"  fill="#f0f4f0"/>
+  <rect x="610" y="203" width="180" height="2"   fill="#6a9e72" opacity="0.3"/>
+  <rect x="628" y="62"  width="42" height="10" fill="#14191a" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="676" y="62"  width="42" height="10" fill="#6a9e72"/>
+  <rect x="724" y="62"  width="42" height="10" fill="#f0f4f0" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="700" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#6a9e72" text-anchor="middle">NUMENYS</text>
+  <text x="700" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#6a9e72" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="664" y1="143" x2="736" y2="143" stroke="#6a9e72" stroke-width="0.6" opacity="0.25"/>
+  <text x="628" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#0f1a10" opacity="0.75">Expertise · Stratégie</text>
+  <text x="628" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#506050">Conseil &amp; Feuille de route</text>
+  <rect x="628" y="256" width="24" height="1" fill="#6a9e72" opacity="0.4"/>
+</g>
+<rect x="610" y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="700" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">04 — Nuit &amp; Sauge</text>
+
+<!-- ── Palette 05 : Noir & Ivoire ── -->
+<g clip-path="url(#cp4)">
+  <rect x="802" y="50"  width="180" height="155" fill="#0f0f0d"/>
+  <rect x="802" y="205" width="180" height="93"  fill="#f8f5ee"/>
+  <rect x="802" y="203" width="180" height="2"   fill="#d8d0b8" opacity="0.3"/>
+  <rect x="820" y="62"  width="42" height="10" fill="#0f0f0d" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="868" y="62"  width="42" height="10" fill="#d8d0b8"/>
+  <rect x="916" y="62"  width="42" height="10" fill="#f8f5ee" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="892" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#d8d0b8" text-anchor="middle">NUMENYS</text>
+  <text x="892" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#d8d0b8" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="856" y1="143" x2="928" y2="143" stroke="#d8d0b8" stroke-width="0.6" opacity="0.25"/>
+  <text x="820" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#12100d" opacity="0.75">Expertise · Stratégie</text>
+  <text x="820" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#6a6a5a">Conseil &amp; Feuille de route</text>
+  <rect x="820" y="256" width="24" height="1" fill="#d8d0b8" opacity="0.4"/>
+</g>
+<rect x="802" y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="892" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">05 — Noir &amp; Ivoire</text>
+
+<!-- ── Palette 06 : Ardoise Froide & Or ── -->
+<g clip-path="url(#cp5)">
+  <rect x="994"  y="50"  width="180" height="155" fill="#171a22"/>
+  <rect x="994"  y="205" width="180" height="93"  fill="#f2f3f8"/>
+  <rect x="994"  y="203" width="180" height="2"   fill="#b0a070" opacity="0.3"/>
+  <rect x="1012" y="62"  width="42" height="10" fill="#171a22" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="1060" y="62"  width="42" height="10" fill="#b0a070"/>
+  <rect x="1108" y="62"  width="42" height="10" fill="#f2f3f8" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="1084" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#b0a070" text-anchor="middle">NUMENYS</text>
+  <text x="1084" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#b0a070" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="1048" y1="143" x2="1120" y2="143" stroke="#b0a070" stroke-width="0.6" opacity="0.25"/>
+  <text x="1012" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#131622" opacity="0.75">Expertise · Stratégie</text>
+  <text x="1012" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#5a5a72">Conseil &amp; Feuille de route</text>
+  <rect x="1012" y="256" width="24" height="1" fill="#b0a070" opacity="0.4"/>
+</g>
+<rect x="994"  y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="1084" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">06 — Ardoise Froide &amp; Or</text>
+
+<!-- ── Palette 07 : Encre & Ambre ── -->
+<g clip-path="url(#cp6)">
+  <rect x="1186" y="50"  width="180" height="155" fill="#1a1008"/>
+  <rect x="1186" y="205" width="180" height="93"  fill="#f8f2e6"/>
+  <rect x="1186" y="203" width="180" height="2"   fill="#d4903a" opacity="0.3"/>
+  <rect x="1204" y="62"  width="42" height="10" fill="#1a1008" stroke="rgba(255,255,255,0.12)" stroke-width="0.5"/>
+  <rect x="1252" y="62"  width="42" height="10" fill="#d4903a"/>
+  <rect x="1300" y="62"  width="42" height="10" fill="#f8f2e6" stroke="rgba(0,0,0,0.06)" stroke-width="0.5"/>
+  <text x="1276" y="110" font-family="'Cormorant Garamond',Georgia,serif" font-size="22" font-weight="600" letter-spacing="3" fill="#d4903a" text-anchor="middle">NUMENYS</text>
+  <text x="1276" y="130" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" letter-spacing="2" fill="#d4903a" opacity="0.45" text-anchor="middle">CONSEIL DATA</text>
+  <line x1="1240" y1="143" x2="1312" y2="143" stroke="#d4903a" stroke-width="0.6" opacity="0.25"/>
+  <text x="1204" y="228" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" fill="#1a0e08" opacity="0.75">Expertise · Stratégie</text>
+  <text x="1204" y="244" font-family="'Inter',sans-serif" font-size="8.5" font-weight="300" fill="#6a5a40">Conseil &amp; Feuille de route</text>
+  <rect x="1204" y="256" width="24" height="1" fill="#d4903a" opacity="0.4"/>
+</g>
+<rect x="1186" y="50"  width="180" height="248" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="1276" y="310" font-family="'Inter',sans-serif" font-size="9" fill="#5a5a52" text-anchor="middle">07 — Encre &amp; Ambre</text>
+
+
+<!-- ══════════════════════════════════════════════════════════ -->
+<!-- SECTION 2 — POLICES                                      -->
+<!-- ══════════════════════════════════════════════════════════ -->
+<text x="34" y="344" font-family="'Inter',sans-serif" font-size="9.5" font-weight="500" letter-spacing="3" fill="#4a4a42">— POLICES D'EN-TÊTE</text>
+
+<!-- ── Police 01 : Cormorant Garamond (actuelle) ── x=34, y=360 -->
+<rect x="34"  y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="34"  y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="124" y="430" font-family="'Cormorant Garamond',Georgia,serif" font-size="28" font-weight="600" letter-spacing="1.5" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="124" y="456" font-family="'Cormorant Garamond',Georgia,serif" font-size="13" font-weight="600" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="74" y1="472" x2="174" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="124" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Cormorant Garamond</text>
+<text x="124" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SERIF</text>
+<rect x="148" y="364" width="60" height="16" rx="2" fill="#c8b48a" opacity="0.12"/>
+<text x="178" y="375" font-family="'Inter',sans-serif" font-size="7.5" font-weight="500" letter-spacing="1" fill="#c8b48a" text-anchor="middle">ACTUELLE</text>
+
+<!-- ── Police 02 : Playfair Display ── x=226, y=360 -->
+<rect x="226" y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="226" y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="316" y="430" font-family="'Playfair Display',Georgia,serif" font-size="28" font-weight="600" letter-spacing="1.5" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="316" y="456" font-family="'Playfair Display',Georgia,serif" font-size="13" font-weight="600" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="266" y1="472" x2="366" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="316" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Playfair Display</text>
+<text x="316" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SERIF · ÉDITORIAL</text>
+
+<!-- ── Police 03 : DM Serif Display ── x=418, y=360 -->
+<rect x="418" y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="418" y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="508" y="430" font-family="'DM Serif Display',Georgia,serif" font-size="28" letter-spacing="1.5" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="508" y="456" font-family="'DM Serif Display',Georgia,serif" font-size="13" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="458" y1="472" x2="558" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="508" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">DM Serif Display</text>
+<text x="508" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SERIF · CHALEUREUX</text>
+
+<!-- ── Police 04 : Libre Baskerville ── x=610, y=360 -->
+<rect x="610" y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="610" y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="700" y="430" font-family="'Libre Baskerville',Georgia,serif" font-size="24" font-weight="700" letter-spacing="1" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="700" y="456" font-family="'Libre Baskerville',Georgia,serif" font-size="12" font-weight="700" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="650" y1="472" x2="750" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="700" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Libre Baskerville</text>
+<text x="700" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SERIF · SOLIDE</text>
+
+<!-- ── Police 05 : Fraunces ── x=802, y=360 -->
+<rect x="802" y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="802" y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="892" y="430" font-family="'Fraunces',Georgia,serif" font-size="28" font-weight="600" letter-spacing="1.5" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="892" y="456" font-family="'Fraunces',Georgia,serif" font-size="13" font-weight="600" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="842" y1="472" x2="942" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="892" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Fraunces</text>
+<text x="892" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SERIF · DISTINCTIF</text>
+
+<!-- ── Police 06 : Raleway ── x=994, y=360 -->
+<rect x="994"  y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="994"  y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="1084" y="430" font-family="'Raleway',sans-serif" font-size="26" font-weight="600" letter-spacing="4" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="1084" y="456" font-family="'Raleway',sans-serif" font-size="12" font-weight="600" letter-spacing="1" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="1034" y1="472" x2="1134" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="1084" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Raleway</text>
+<text x="1084" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SANS-SERIF · ÉLÉGANT</text>
+
+<!-- ── Police 07 : Josefin Sans ── x=1186, y=360 -->
+<rect x="1186" y="360" width="180" height="220" rx="3" fill="#14161a"/>
+<rect x="1186" y="360" width="180" height="220" rx="3" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+<text x="1276" y="430" font-family="'Josefin Sans',sans-serif" font-size="26" font-weight="600" letter-spacing="4" fill="#f8f6f2" text-anchor="middle"><tspan>NUMEN</tspan><tspan fill="#c8b48a">YS</tspan></text>
+<text x="1276" y="456" font-family="'Josefin Sans',sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#aaa9a0" text-anchor="middle">Conseil &amp; Stratégie</text>
+<line x1="1226" y1="472" x2="1326" y2="472" stroke="#c8b48a" stroke-width="0.6" opacity="0.2"/>
+<text x="1276" y="489" font-family="'Inter',sans-serif" font-size="8" fill="#5a5a52" text-anchor="middle">Josefin Sans</text>
+<text x="1276" y="501" font-family="'Inter',sans-serif" font-size="7.5" letter-spacing="1" fill="#3a3a32" text-anchor="middle">SANS-SERIF · GÉOMÉTRIQUE</text>
+
+<!-- Séparateur entre sections -->
+<line x1="34" y1="325" x2="1366" y2="325" stroke="#2a2a22" stroke-width="1"/>
+
+</svg>

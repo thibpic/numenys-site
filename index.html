@@ -4,10 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Numenys – Conseil Data & Stratégie</title>
+<meta name="description" content="Numenys accompagne les entreprises dans leurs projets data : stratégie, analytics, BI, data engineering et management de transition. Basé à Paris et Tours.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Thibaut Picard Destelan">
+<link rel="canonical" href="https://numenys.fr/">
+<link rel="alternate" hreflang="fr" href="https://numenys.fr/">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://numenys.fr/">
+<meta property="og:title" content="Numenys – Conseil Data & Stratégie">
+<meta property="og:description" content="Numenys accompagne les entreprises dans leurs projets data : stratégie, analytics, BI, data engineering et management de transition.">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Numenys">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Numenys – Conseil Data & Stratégie">
+<meta name="twitter:description" content="Conseil data indépendant : stratégie, analytics, BI, management de transition. Paris - Tours.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Numenys",
+  "description": "Société de conseil indépendante spécialisée dans la donnée : stratégie data, analytics, BI, data engineering et management de transition.",
+  "url": "https://numenys.fr",
+  "telephone": "+33681964770",
+  "email": "thibaut@numenys.fr",
+  "founder": {
+    "@type": "Person",
+    "name": "Thibaut Picard Destelan",
+    "jobTitle": "Fondateur",
+    "sameAs": "https://linkedin.com/in/thibaut-picard-destelan"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
+  },
+  "address": [
+    {"@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR"},
+    {"@type": "PostalAddress", "addressLocality": "Tours", "addressCountry": "FR"}
+  ],
+  "knowsAbout": ["Data Analytics", "Business Intelligence", "Data Strategy", "Data Engineering", "Management de transition"],
+  "sameAs": [
+    "https://linkedin.com/in/thibaut-picard-destelan",
+    "https://www.malt.fr/profile/thibautpicarddestelan"
+  ]
+}
+</script>
 <style>
   :root {
     --dark:       #14161a;
@@ -32,7 +78,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Raleway', system-ui, sans-serif;
     background: var(--dark);
     color: var(--blanc);
     line-height: 1.6;
@@ -52,7 +98,7 @@
   }
 
   .logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     letter-spacing: 2px;
@@ -70,6 +116,7 @@
     font-size: .875rem; letter-spacing: .3px;
     cursor:pointer; font-family:inherit; transition:.2s;
     padding:0; font-weight:400;
+    text-decoration:none; display:inline-block;
   }
   .nav-btn:hover { color: var(--blanc-pur); }
 
@@ -85,6 +132,7 @@
     font-family:inherit;
     transition: .25s;
     letter-spacing: .3px;
+    text-decoration:none; display:inline-block;
   }
   .nav-cta:hover {
     background: var(--gold);
@@ -132,9 +180,9 @@
   }
 
   #hero h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.1;
     letter-spacing: -.5px;
     margin-bottom: 1.6rem;
@@ -151,7 +199,7 @@
     max-width: 520px;
     margin: 0 auto 2.8rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
@@ -204,7 +252,7 @@
   }
   .stat { text-align:center; }
   .stat-num {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 2rem; font-weight: 600;
     color: var(--gold);
     letter-spacing: -.5px;
@@ -231,7 +279,7 @@
   }
 
   .section-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: clamp(2rem, 3.4vw, 3.2rem);
     font-weight: 600;
     line-height: 1.15;
@@ -247,7 +295,7 @@
     max-width: 520px;
     margin-bottom: 3.5rem;
   }
-  .dark-section .section-sub { color: var(--texte-mid); font-weight:300; }
+  .dark-section .section-sub { color: var(--texte-mid); font-weight:400; }
   .light-section .section-sub { color: #6a6a62; }
 
   /* ─── SECTION ABOUT (dark) ───────────────────────── */
@@ -279,13 +327,13 @@
     width: 88px; height: 88px; border-radius:50%;
     background: linear-gradient(135deg, #c8b48a, #8a7a5a);
     display:flex; align-items:center; justify-content:center;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.7rem; font-weight: 600; color: var(--blanc-pur);
     margin: 0 auto 1.5rem;
     letter-spacing: 1px;
   }
   .about-name {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.25rem; font-weight: 600;
     color: var(--blanc-pur); margin-bottom: .35rem;
     letter-spacing: .3px;
@@ -311,7 +359,7 @@
     line-height: 1.85;
     margin-bottom: 1rem;
     font-size: .93rem;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1.8rem; }
@@ -369,7 +417,7 @@
   .service-icon svg { width: 19px; height: 19px; stroke: var(--gold); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
 
   .service-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.1rem; font-weight: 600;
     color: var(--dark-text);
     margin-bottom: .6rem;
@@ -401,7 +449,7 @@
     width: 54px; height: 54px; border-radius: 50%;
     border: 1px solid rgba(200,180,138,0.3);
     display:flex; align-items:center; justify-content:center;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600; font-size: 1.1rem;
     color: var(--gold);
     margin: 0 auto 1.3rem;
@@ -415,14 +463,14 @@
   }
 
   .step-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600; font-size: 1.05rem;
     color: var(--blanc-pur); margin-bottom: .5rem;
     letter-spacing: .1px;
   }
   .step-desc {
     color: var(--texte); font-size: .84rem;
-    line-height: 1.72; font-weight: 300;
+    line-height: 1.72; font-weight: 400;
   }
 
   /* ─── SECTION CONTACT (dark-2) ───────────────────── */
@@ -469,7 +517,7 @@
     flex-wrap:wrap; gap: 1rem;
   }
   .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1.2rem; font-weight: 600;
     letter-spacing: 2px; color: var(--blanc-pur);
     text-transform: uppercase;
@@ -510,7 +558,7 @@
 <!-- ── NAV ── -->
 <nav>
   <div class="logo">
-    <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg aria-hidden="true" width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g stroke="#c8b48a" stroke-width="1.2" opacity="0.3" stroke-linecap="round">
         <line x1="8"  y1="13" x2="45" y2="13"/>
         <line x1="8"  y1="13" x2="8"  y2="41"/>
@@ -538,13 +586,16 @@
       </g>
     </svg>NUMEN<span>YS</span></div>
   <ul class="nav-links">
-    <li><button class="nav-btn" onclick="go('about')">À propos</button></li>
-    <li><button class="nav-btn" onclick="go('services')">Services</button></li>
-    <li><button class="nav-btn" onclick="go('approche')">Approche</button></li>
-    <li><button class="nav-btn" onclick="go('contact')">Contact</button></li>
+    <li><a class="nav-btn" href="#about">À propos</a></li>
+    <li><a class="nav-btn" href="#services">Services</a></li>
+    <li><a class="nav-btn" href="#approche">Approche</a></li>
+    <li><a class="nav-btn" href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="go('contact')">Prendre contact</button>
+  <a class="nav-cta" href="#contact">Prendre contact</a>
 </nav>
+
+<!-- ── MAIN ── -->
+<main>
 
 <!-- ── HERO ── -->
 <section id="hero">
@@ -750,10 +801,12 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── FOOTER ── -->
 <footer>
   <div class="footer-logo">
-    <svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g stroke="#c8b48a" stroke-width="1.2" opacity="0.3" stroke-linecap="round">
         <line x1="8"  y1="13" x2="45" y2="13"/>
         <line x1="8"  y1="13" x2="8"  y2="41"/>
@@ -780,7 +833,7 @@
         <circle cx="19" cy="52" r="3"/>
       </g>
     </svg>NUMEN<span>YS</span></div>
-  <div class="footer-text">© 2025 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
+  <div class="footer-text">© 2026 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
   <div class="footer-loc">Paris - Tours - France</div>
 </footer>
 
