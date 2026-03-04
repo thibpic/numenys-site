@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numenys – Conseil Data & Stratégie</title>
+<style>
+  :root {
+    --noir: #0d0d0d;
+    --anthracite: #1a1a2e;
+    --gris: #2e2e3e;
+    --accent: #4f8ef7;
+    --accent2: #7c5cbf;
+    --blanc: #f5f5f7;
+    --texte: #c8c8d8;
+    --card: #16162a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--noir); color: var(--blanc); }
+
+  /* NAV */
+  nav {
+    position: fixed; top:0; width:100%; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 1.2rem 5%;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(79,142,247,0.12);
+  }
+  .logo { font-size:1.5rem; font-weight:700; letter-spacing:2px; color:var(--blanc); }
+  .logo span { color: var(--accent); }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-btn {
+    background:none; border:none; color:var(--texte); font-size:.9rem;
+    letter-spacing:.5px; cursor:pointer; font-family:inherit; transition:.2s; padding:0;
+  }
+  .nav-btn:hover { color:var(--accent); }
+  .nav-cta {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color:#fff; border:none; padding:.6rem 1.4rem; border-radius:6px;
+    font-size:.85rem; cursor:pointer; font-family:inherit; transition:.2s;
+  }
+  .nav-cta:hover { opacity:.85; }
+
+  /* HERO */
+  #hero {
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding: 6rem 5% 4rem;
+    background: radial-gradient(ellipse at 60% 40%, rgba(79,142,247,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(124,92,191,0.07) 0%, transparent 50%),
+                var(--noir);
+  }
+  .hero-tag {
+    display:inline-block; font-size:.78rem; letter-spacing:2px; text-transform:uppercase;
+    color:var(--accent); border:1px solid rgba(79,142,247,0.35); border-radius:20px;
+    padding:.35rem 1rem; margin-bottom:1.8rem;
+  }
+  #hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem); font-weight:700; line-height:1.15;
+    margin-bottom:1.4rem; letter-spacing:-1px;
+  }
+  #hero h1 span {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  #hero p { font-size:1.1rem; color:var(--texte); max-width:580px; margin:0 auto 2.5rem; line-height:1.7; }
+  .hero-btns { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color:#fff; padding:.85rem 2rem; border-radius:8px; border:none;
+    font-weight:600; font-size:.95rem; cursor:pointer; font-family:inherit; transition:.2s;
+  }
+  .btn-primary:hover { opacity:.85; transform:translateY(-1px); }
+  .btn-outline {
+    border:1px solid rgba(79,142,247,0.4); color:var(--blanc); padding:.85rem 2rem;
+    border-radius:8px; background:none; font-size:.95rem; cursor:pointer;
+    font-family:inherit; transition:.2s;
+  }
+  .btn-outline:hover { border-color:var(--accent); color:var(--accent); }
+  .hero-stats { display:flex; gap:3rem; justify-content:center; margin-top:4rem; flex-wrap:wrap; }
+  .stat { text-align:center; }
+  .stat-num { font-size:2rem; font-weight:700; color:var(--accent); }
+  .stat-label { font-size:.8rem; color:var(--texte); text-transform:uppercase; letter-spacing:1px; margin-top:.2rem; }
+
+  /* SECTIONS */
+  section { padding: 5rem 5%; }
+  .section-tag { font-size:.75rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:.8rem; }
+  .section-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight:700; margin-bottom:1rem; letter-spacing:-.5px; }
+  .section-subtitle { color:var(--texte); max-width:580px; line-height:1.7; margin-bottom:3rem; }
+
+  /* ABOUT */
+  #about { background: var(--anthracite); }
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+  .about-visual {
+    background: linear-gradient(135deg, var(--card), var(--gris));
+    border:1px solid rgba(79,142,247,0.15); border-radius:16px;
+    padding:3rem; text-align:center;
+  }
+  .avatar {
+    width:100px; height:100px; border-radius:50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display:flex; align-items:center; justify-content:center;
+    font-size:2.2rem; font-weight:700; margin:0 auto 1.2rem;
+  }
+  .about-name { font-size:1.3rem; font-weight:700; margin-bottom:.3rem; }
+  .about-role { color:var(--accent); font-size:.9rem; margin-bottom:1rem; }
+  .about-text p { color:var(--texte); line-height:1.8; margin-bottom:1rem; }
+  .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.5rem; }
+  .tag {
+    background:rgba(79,142,247,0.1); border:1px solid rgba(79,142,247,0.2);
+    color:var(--accent); font-size:.78rem; padding:.3rem .8rem; border-radius:20px;
+  }
+
+  /* SERVICES */
+  #services { background: var(--noir); }
+  .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
+  .service-card {
+    background:var(--card); border:1px solid rgba(79,142,247,0.1);
+    border-radius:14px; padding:2rem; transition:.3s;
+    position:relative; overflow:hidden;
+  }
+  .service-card::before {
+    content:''; position:absolute; top:0; left:0; right:0; height:2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    opacity:0; transition:.3s;
+  }
+  .service-card:hover { border-color:rgba(79,142,247,0.3); transform:translateY(-4px); }
+  .service-card:hover::before { opacity:1; }
+  .service-icon { font-size:2rem; margin-bottom:1rem; }
+  .service-title { font-size:1.1rem; font-weight:600; margin-bottom:.7rem; }
+  .service-desc { color:var(--texte); font-size:.9rem; line-height:1.7; }
+
+  /* APPROCHE */
+  #approche { background: var(--anthracite); }
+  .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; margin-top:3rem; }
+  .step { text-align:center; }
+  .step-num {
+    width:52px; height:52px; border-radius:50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:1.1rem; margin:0 auto 1rem;
+  }
+  .step-title { font-weight:600; margin-bottom:.5rem; }
+  .step-desc { color:var(--texte); font-size:.88rem; line-height:1.6; }
+
+  /* CONTACT */
+  #contact { background: var(--noir); }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
+  .contact-info { display:flex; flex-direction:column; gap:1.5rem; margin-top:2rem; }
+  .contact-item {
+    display:flex; align-items:center; gap:1rem;
+    background:var(--card); border:1px solid rgba(79,142,247,0.1);
+    border-radius:12px; padding:1.2rem 1.5rem;
+  }
+  .contact-item-icon {
+    width:40px; height:40px; border-radius:8px;
+    background: linear-gradient(135deg, rgba(79,142,247,.2), rgba(124,92,191,.2));
+    display:flex; align-items:center; justify-content:center; font-size:1.1rem; flex-shrink:0;
+  }
+  .contact-item-label { font-size:.75rem; color:var(--texte); text-transform:uppercase; letter-spacing:1px; }
+  .contact-item-value { font-size:.95rem; color:var(--blanc); margin-top:.15rem; }
+  .contact-form { background:var(--card); border:1px solid rgba(79,142,247,0.1); border-radius:16px; padding:2.5rem; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .form-group { margin-bottom:1.2rem; }
+  .form-group label { display:block; font-size:.82rem; color:var(--texte); margin-bottom:.5rem; }
+  .form-group input, .form-group textarea {
+    width:100%; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.1);
+    border-radius:8px; padding:.75rem 1rem; color:var(--blanc); font-size:.9rem;
+    font-family:inherit; transition:.2s; outline:none;
+  }
+  .form-group input:focus, .form-group textarea:focus { border-color:var(--accent); background:rgba(79,142,247,.06); }
+  .form-group textarea { resize:vertical; min-height:120px; }
+  .btn-submit {
+    width:100%; background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color:#fff; border:none; padding:1rem; border-radius:8px;
+    font-size:.95rem; font-weight:600; cursor:pointer; transition:.2s; font-family:inherit;
+  }
+  .btn-submit:hover { opacity:.85; }
+
+  /* FOOTER */
+  footer {
+    background:var(--anthracite); border-top:1px solid rgba(79,142,247,0.1);
+    padding:2rem 5%; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;
+  }
+  .footer-logo { font-size:1.2rem; font-weight:700; letter-spacing:2px; }
+  .footer-logo span { color:var(--accent); }
+  .footer-text { color:var(--texte); font-size:.82rem; }
+
+  @media (max-width: 768px) {
+    .about-grid, .contact-grid { grid-template-columns:1fr; }
+    .form-row { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+    .hero-stats { gap:1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">NUM<span>E</span>NYS</div>
+  <ul class="nav-links">
+    <li><button class="nav-btn" onclick="go('about')">À propos</button></li>
+    <li><button class="nav-btn" onclick="go('services')">Services</button></li>
+    <li><button class="nav-btn" onclick="go('approche')">Approche</button></li>
+    <li><button class="nav-btn" onclick="go('contact')">Contact</button></li>
+  </ul>
+  <button class="nav-cta" onclick="go('contact')">Prendre contact</button>
+</nav>
+
+<section id="hero">
+  <div>
+    <div class="hero-tag">Conseil Data &amp; Stratégie</div>
+    <h1>Transformez votre donnée<br>en <span>avantage compétitif</span></h1>
+    <p>Numenys accompagne les entreprises dans leurs projets data : de la stratégie à l'exécution, du diagnostic à la mise en œuvre opérationnelle.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="go('services')">Découvrir les services</button>
+      <button class="btn-outline" onclick="go('contact')">Nous contacter</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">Data</div><div class="stat-label">Analyse & BI</div></div>
+      <div class="stat"><div class="stat-num">360°</div><div class="stat-label">Vision stratégique</div></div>
+      <div class="stat"><div class="stat-num">On-site</div><div class="stat-label">Management de transition</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="avatar">TP</div>
+      <div class="about-name">Thibaut Picard Destelan</div>
+      <div class="about-role">Fondateur — Numenys</div>
+    </div>
+    <div class="about-text">
+      <div class="section-tag">À propos</div>
+      <h2 class="section-title">Conseil expert,<br>approche sur mesure</h2>
+      <p>Numenys est une société de conseil indépendante fondée par Thibaut Picard Destelan, expert en stratégie data et management IT.</p>
+      <p>Fort d'une expérience terrain auprès d'organisations de toutes tailles, Numenys intervient comme partenaire de confiance pour structurer, piloter et valoriser vos projets data — de l'audit initial jusqu'à la livraison opérationnelle.</p>
+      <p>L'approche conjugue rigueur analytique, sens du business et proximité avec les équipes.</p>
+      <div class="tags">
+        <span class="tag">Data Analyse</span>
+        <span class="tag">Business Intelligence</span>
+        <span class="tag">Stratégie Data</span>
+        <span class="tag">Management de transition</span>
+        <span class="tag">Pilotage de projets</span>
+        <span class="tag">Conseil & Diagnostic</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-tag">Services</div>
+  <h2 class="section-title">Une offre complète autour de la donnée</h2>
+  <p class="section-subtitle">De la définition de votre vision data jusqu'à l'exécution opérationnelle, Numenys intervient à chaque étape de votre transformation.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <div class="service-title">Data Analyse</div>
+      <div class="service-desc">Exploitation et valorisation de vos données pour produire des insights actionnables. Modélisation, analyse exploratoire, reporting et visualisation.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🖥️</div>
+      <div class="service-title">Business Intelligence</div>
+      <div class="service-desc">Conception et déploiement de vos outils BI : dashboards, indicateurs de performance, architecture de reporting adaptée à vos métiers.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🧭</div>
+      <div class="service-title">Stratégie Data</div>
+      <div class="service-desc">Définition de votre feuille de route data : gouvernance, organisation, choix technologiques et alignement avec les objectifs business.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔄</div>
+      <div class="service-title">Management de transition</div>
+      <div class="service-desc">Intervention opérationnelle en tant que manager data ou DSI de transition pour assurer la continuité et la montée en maturité de vos équipes.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🎯</div>
+      <div class="service-title">Pilotage de projets Data</div>
+      <div class="service-desc">Cadrage, coordination et suivi de vos projets data de bout en bout. Méthodes agiles et adaptées à la réalité terrain de votre organisation.</div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <div class="service-title">Diagnostic & Recommandations</div>
+      <div class="service-desc">Audit de votre maturité data, identification des axes d'amélioration prioritaires et plan d'action concret pour progresser efficacement.</div>
+    </div>
+  </div>
+</section>
+
+<section id="approche">
+  <div class="section-tag">Approche</div>
+  <h2 class="section-title">Une méthode en 4 étapes</h2>
+  <p class="section-subtitle">Chaque mission débute par une écoute approfondie et se conclut par des livrables concrets, ancrés dans la réalité de votre organisation.</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-title">Diagnostic</div>
+      <div class="step-desc">Audit de l'existant, compréhension des enjeux métiers et identification des leviers à activer.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-title">Stratégie</div>
+      <div class="step-desc">Co-construction d'une feuille de route réaliste, priorisée et alignée sur vos objectifs.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-title">Exécution</div>
+      <div class="step-desc">Pilotage et mise en œuvre opérationnelle, en immersion avec vos équipes.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-title">Transfert</div>
+      <div class="step-desc">Montée en autonomie de vos équipes et pérennisation des acquis après la mission.</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-tag">Contact</div>
+      <h2 class="section-title">Parlons de votre projet</h2>
+      <p class="section-subtitle">Vous avez un projet data, une problématique à résoudre ou souhaitez simplement échanger ? Contactez Thibaut directement.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">thibaut@numenys.fr</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Téléphone</div>
+            <div class="contact-item-value">06 81 96 47 70</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🔗</div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value">Thibaut Picard Destelan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h3 style="margin-bottom:1.5rem; font-size:1.15rem;">Envoyer un message</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Prénom</label>
+          <input type="text" placeholder="Jean">
+        </div>
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" placeholder="Dupont">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="jean.dupont@entreprise.fr">
+      </div>
+      <div class="form-group">
+        <label>Sujet</label>
+        <input type="text" placeholder="Votre projet ou demande">
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea placeholder="Décrivez votre projet, contexte ou question..."></textarea>
+      </div>
+      <button class="btn-submit" onclick="this.textContent='Message envoyé ✓'; this.style.background='#2d7a4f'; setTimeout(()=>{this.textContent='Envoyer le message'; this.style.background='';},3000)">Envoyer le message</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">NUM<span>E</span>NYS</div>
+  <div class="footer-text">© 2025 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
+  <div class="footer-text" style="color:var(--accent); font-size:.8rem;">Paris, France</div>
+</footer>
+
+<script>
+  function go(id) {
+    var el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
