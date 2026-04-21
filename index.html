@@ -364,6 +364,24 @@
     font-weight: 400;
   }
 
+  .about-callout {
+    margin-top: 1.8rem;
+    padding: 1.1rem 1.3rem 1.2rem;
+    border-left: 2px solid var(--gold);
+    background: var(--gold-dim);
+    border-radius: 0 3px 3px 0;
+  }
+  .about-callout-label {
+    font-size: .68rem; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 1.8px;
+    font-weight: 600; margin-bottom: .45rem;
+  }
+  .about-callout p {
+    color: var(--texte-mid);
+    font-size: .9rem; line-height: 1.75;
+    font-weight: 400; margin: 0;
+  }
+
   .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1.8rem; }
   .tag {
     background: var(--gold-dim);
@@ -645,10 +663,16 @@
     </div>
     <div class="about-text">
       <div class="section-eyebrow">À propos</div>
-      <h2 class="section-title">Conseil expert,<br>approche sur mesure</h2>
-      <p>Numenys est une société de conseil indépendante spécialisée dans la donnée, fondée par Thibaut Picard Destelan.</p>
-      <p>L'intervention s'articule autour de trois axes complémentaires : <strong style="color:var(--blanc-pur); font-weight:500;">expertise data</strong> (analytics, BI, ingénierie et plateforme) ; <strong style="color:var(--blanc-pur); font-weight:500;">conseil stratégique</strong> (gouvernance, diagnostic, feuille de route) ; <strong style="color:var(--blanc-pur); font-weight:500;">management de transition</strong> (pilotage opérationnel, structuration et montée en maturité des équipes).</p>
-      <p>Chaque mission est conduite avec rigueur analytique, sens du business et forte proximité avec les équipes.</p>
+      <h2 class="section-title">Un profil hybride,<br>de la stratégie à la technique</h2>
+      <p>Numenys est une société de conseil indépendante spécialisée dans la donnée, fondée par Thibaut Picard Destelan, qui cumule 10 ans d'expérience en data science, data engineering, BI et data management.</p>
+      <p>Ce parcours terrain — rarement concentré sur un seul profil — permet d'intervenir simultanément sur la <strong style="color:var(--blanc-pur); font-weight:500;">stratégie</strong> (feuille de route, gouvernance), le <strong style="color:var(--blanc-pur); font-weight:500;">pilotage</strong> (management de transition, coordination d'équipe) et l'<strong style="color:var(--blanc-pur); font-weight:500;">exécution technique</strong> (SQL, Python, Power BI, Microsoft Fabric).</p>
+      <p>Chaque mission est conduite avec rigueur analytique, sens du business et proximité forte avec les équipes.</p>
+
+      <div class="about-callout">
+        <div class="about-callout-label">Modèle d'intervention</div>
+        <p>Numenys opère aussi en coordination d'équipe freelance : Thibaut reste l'interlocuteur client unique et garant de la qualité, l'exécution étant assurée par un réseau de freelances séniors mobilisés selon les besoins de la mission.</p>
+      </div>
+
       <div class="tags">
         <span class="tag">Data Analyse</span>
         <span class="tag">Business Intelligence</span>
