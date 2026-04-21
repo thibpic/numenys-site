@@ -392,6 +392,62 @@
     letter-spacing: .3px;
   }
 
+  /* ─── SECTION RÉFÉRENCES (dark) ──────────────────── */
+  .references-section {
+    background: var(--dark);
+    padding: 4.5rem 6% 5rem;
+    border-top: 1px solid rgba(200,180,138,0.08);
+    border-bottom: 1px solid rgba(200,180,138,0.08);
+  }
+  .references-inner { max-width: 1100px; margin: 0 auto; }
+  .references-header { text-align: center; margin-bottom: 3rem; }
+  .references-header .section-eyebrow { justify-content: center; }
+  .references-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    font-weight: 500;
+    color: var(--blanc-pur);
+    letter-spacing: .2px;
+    margin: 0;
+  }
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 2.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .reference-item {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texte);
+    opacity: .55;
+    transition: color .25s, opacity .25s, transform .25s;
+    text-align: center;
+    user-select: none;
+    padding: .4rem .6rem;
+  }
+  .reference-item:hover {
+    color: var(--gold);
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  /* Placeholder : le jour où l'on passe aux vraies images de logos */
+  .reference-logo {
+    max-width: 140px;
+    max-height: 44px;
+    filter: grayscale(1) brightness(1.2);
+    opacity: .55;
+    transition: .25s;
+  }
+  .reference-logo:hover {
+    filter: none;
+    opacity: 1;
+  }
+
   /* ─── SECTION SERVICES (light) ───────────────────── */
   #services { background: var(--light-bg); }
   .light-section { background: var(--light-bg); }
@@ -559,6 +615,7 @@
     .steps { grid-template-columns: repeat(2, 1fr); }
     .steps::before { display:none; }
     .about-grid { grid-template-columns: 1fr; }
+    .references-grid { grid-template-columns: repeat(3, 1fr); gap: 1.8rem 2rem; }
   }
   @media (max-width: 768px) {
     .about-grid { grid-template-columns:1fr; gap:2.5rem; }
@@ -566,9 +623,12 @@
     .contact-info { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns:1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
+    .references-grid { grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1.6rem; }
+    .reference-item { font-size: .88rem; letter-spacing: 1.5px; }
     .nav-links { display:none; }
     .hero-stats { gap: 2rem; }
     section { padding: 4rem 5%; }
+    .references-section { padding: 3rem 5% 3.5rem; }
     nav { padding: 1.2rem 5%; }
   }
 </style>
@@ -607,6 +667,7 @@
     </svg>NUMEN<span>YS</span></div>
   <ul class="nav-links">
     <li><a class="nav-btn" href="#about">À propos</a></li>
+    <li><a class="nav-btn" href="#references">Références</a></li>
     <li><a class="nav-btn" href="#services">Services</a></li>
     <li><a class="nav-btn" href="#approche">Approche</a></li>
     <li><a class="nav-btn" href="#contact">Contact</a></li>
@@ -681,6 +742,32 @@
         <span class="tag">Pilotage de projets</span>
         <span class="tag">Conseil & Diagnostic</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RÉFÉRENCES ── -->
+<!--
+  Rendu typographique provisoire : remplacer chaque .reference-item
+  par un <img src="logos/xxx.svg" alt="XXX" class="reference-logo"> le jour
+  où les logos officiels sont disponibles (filtre grayscale + hover couleur
+  à prévoir côté CSS).
+-->
+<section id="references" class="dark-section references-section">
+  <div class="references-inner">
+    <div class="references-header">
+      <div class="section-eyebrow" style="justify-content:center;">Références</div>
+      <h2 class="references-title">Ils ont fait confiance à Numenys</h2>
+    </div>
+    <div class="references-grid">
+      <div class="reference-item">Gecina</div>
+      <div class="reference-item">BPCE</div>
+      <div class="reference-item">I3F</div>
+      <div class="reference-item">FFR</div>
+      <div class="reference-item">Groupe Beaumanoir</div>
+      <div class="reference-item">Citya</div>
+      <div class="reference-item">Guy Hoquet</div>
+      <div class="reference-item">IBP</div>
     </div>
   </div>
 </section>
