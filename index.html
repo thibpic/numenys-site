@@ -603,6 +603,12 @@
   .footer-logo span { color: var(--gold); }
   .footer-logo svg { flex-shrink: 0; margin-right: .55rem; }
   .footer-text { color: var(--texte); font-size: .78rem; }
+  .footer-link {
+    color: var(--texte-mid);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .footer-link:hover { color: var(--gold); }
   .footer-loc {
     font-size: .75rem; color: var(--gold);
     font-weight: 500; letter-spacing: .5px;
@@ -952,7 +958,10 @@
         <circle cx="19" cy="52" r="3"/>
       </g>
     </svg>NUMEN<span>YS</span></div>
-  <div class="footer-text">© 2026 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
+  <div class="footer-text">
+    © 2026 Numenys — Thibaut Picard Destelan — Conseil Data &amp; Stratégie
+    · <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+  </div>
   <div class="footer-loc">Paris - Tours - France</div>
 </footer>
 

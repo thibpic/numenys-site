@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales – Numenys</title>
+<meta name="description" content="Mentions légales du site numenys.fr : éditeur, hébergeur, propriété intellectuelle et politique de confidentialité.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://numenys.fr/mentions-legales.html">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:       #14161a;
+    --dark-2:     #1c1f26;
+    --dark-3:     #252931;
+    --gold:       #c8b48a;
+    --blanc:      #ede9e1;
+    --blanc-pur:  #f8f6f2;
+    --texte:      #8a8a7e;
+    --texte-mid:  #aaa9a0;
+    --card-bord:  rgba(200,180,138,0.16);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Raleway', system-ui, sans-serif;
+    background: var(--dark);
+    color: var(--blanc);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky; top:0; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 1.2rem 6%;
+    background: rgba(20,22,26,0.9);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(200,180,138,0.12);
+  }
+  .logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem; font-weight: 600;
+    letter-spacing: 2px; color: var(--blanc-pur);
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--gold); }
+  .back-link {
+    font-size: .85rem;
+    color: var(--texte-mid);
+    letter-spacing: .3px;
+  }
+  .back-link:hover { color: var(--blanc-pur); text-decoration:none; }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4rem 6% 6rem;
+  }
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--blanc-pur);
+    margin-bottom: .5rem;
+    letter-spacing: -.3px;
+  }
+  .subtitle {
+    font-size: .9rem;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--blanc-pur);
+    margin: 2.5rem 0 .9rem;
+    letter-spacing: .1px;
+  }
+  h2::before {
+    content:''; display:inline-block;
+    width: 20px; height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: .7rem;
+    opacity: .8;
+  }
+
+  p, li {
+    color: var(--texte-mid);
+    font-size: .93rem;
+    margin-bottom: .8rem;
+  }
+  ul { list-style: none; padding: 0; }
+  ul li {
+    padding: .35rem 0 .35rem 1rem;
+    position: relative;
+  }
+  ul li::before {
+    content: '·';
+    position: absolute; left: 0;
+    color: var(--gold);
+  }
+  strong {
+    color: var(--blanc-pur);
+    font-weight: 500;
+  }
+
+  .placeholder {
+    color: var(--gold);
+    background: rgba(200,180,138,0.08);
+    padding: .1rem .5rem;
+    border-radius: 2px;
+    font-family: ui-monospace, 'SFMono-Regular', Menlo, monospace;
+    font-size: .85em;
+    border: 1px dashed rgba(200,180,138,0.4);
+  }
+
+  footer {
+    border-top: 1px solid rgba(200,180,138,0.1);
+    padding: 1.8rem 6%;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap: 1rem;
+    font-size: .78rem;
+    color: var(--texte);
+  }
+  footer a { color: var(--texte-mid); }
+
+  @media (max-width: 640px) {
+    main { padding: 2.5rem 6% 4rem; }
+    nav { padding: 1rem 5%; }
+    footer { padding: 1.5rem 5%; font-size: .72rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo" style="text-decoration:none;">NUMEN<span>YS</span></a>
+  <a href="index.html" class="back-link">← Retour à l'accueil</a>
+</nav>
+
+<main>
+  <h1>Mentions légales</h1>
+  <p class="subtitle">Informations éditeur &amp; confidentialité</p>
+
+  <h2>Éditeur du site</h2>
+  <p>
+    <strong>Numenys</strong><br>
+    Forme juridique : <span class="placeholder">[forme juridique]</span>
+    <!-- À compléter par Thibaut : SAS, SASU, EURL, EI, micro-entreprise, etc. -->
+    <br>
+    SIRET : <span class="placeholder">[SIRET]</span>
+    <!-- À compléter par Thibaut : 14 chiffres -->
+    <br>
+    Siège social : <span class="placeholder">[adresse]</span>
+    <!-- À compléter par Thibaut : adresse postale complète -->
+    <br>
+    Email : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a><br>
+    Téléphone : <a href="tel:+33681964770">06 81 96 47 70</a>
+  </p>
+
+  <h2>Directeur de la publication</h2>
+  <p>Thibaut Picard Destelan, fondateur de Numenys.</p>
+
+  <h2>Hébergeur</h2>
+  <p>
+    <span class="placeholder">[hébergeur]</span>
+    <!--
+      À compléter par Thibaut : nom de l'hébergeur + adresse + téléphone.
+      Ex. GitHub Pages : GitHub, Inc., 88 Colin P Kelly Jr St,
+      San Francisco, CA 94107, United States.
+    -->
+  </p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>L'ensemble des contenus présents sur le site numenys.fr (textes, éléments graphiques, logo, structure, code source) est la propriété exclusive de Numenys, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
+  <p>Les noms et marques cités dans la section « Références » restent la propriété de leurs détenteurs respectifs et sont mentionnés à titre illustratif des missions menées.</p>
+
+  <h2>Données personnelles &amp; RGPD</h2>
+  <p>Le site numenys.fr est un site vitrine statique. Il ne collecte <strong>aucune donnée personnelle</strong> de manière automatisée :</p>
+  <ul>
+    <li>aucun formulaire de contact en ligne (les échanges se font par email <code>mailto:</code>, téléphone ou via les plateformes tierces LinkedIn et Malt) ;</li>
+    <li>aucun outil d'analyse d'audience (pas de Google Analytics, Matomo ou équivalent) ;</li>
+    <li>aucun cookie non essentiel n'est déposé sur votre appareil ;</li>
+    <li>aucun pixel de suivi ni traceur publicitaire.</li>
+  </ul>
+  <p>Les seules données échangées avec Numenys sont celles que vous transmettez volontairement par email (<a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>). Elles sont utilisées exclusivement pour répondre à votre sollicitation et ne sont ni cédées, ni vendues à des tiers.</p>
+  <p>Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur les données qui vous concernent. Pour l'exercer, contactez : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>.</p>
+
+  <h2>Ressources tierces</h2>
+  <p>Le site charge la police de caractères <strong>Raleway</strong> depuis Google Fonts (fonts.googleapis.com, fonts.gstatic.com). Cette requête peut transmettre votre adresse IP et votre user-agent à Google, le temps du chargement des fichiers de police. Aucun cookie n'est déposé par ce biais.</p>
+
+  <h2>Cookies</h2>
+  <p>Aucun cookie n'est utilisé sur numenys.fr. Aucune bannière de consentement n'est donc nécessaire.</p>
+
+  <h2>Responsabilité</h2>
+  <p>Numenys s'efforce de maintenir les informations de ce site à jour et exactes, mais ne peut garantir l'absence d'erreurs ou d'omissions. L'utilisation du site se fait sous la seule responsabilité de l'utilisateur.</p>
+
+  <h2>Droit applicable</h2>
+  <p>Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l'utilisation du site relève de la compétence exclusive des tribunaux français.</p>
+</main>
+
+<footer>
+  <div>© 2026 Numenys — Thibaut Picard Destelan</div>
+  <a href="index.html">Retour à l'accueil</a>
+</footer>
+
+</body>
+</html>
