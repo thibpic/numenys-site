@@ -1,0 +1,5 @@
+# Config locale et worktrees Claude Code
+.claude/
+
+# macOS
+.DS_Store
