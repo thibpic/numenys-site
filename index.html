@@ -364,6 +364,24 @@
     font-weight: 400;
   }
 
+  .about-callout {
+    margin-top: 1.8rem;
+    padding: 1.1rem 1.3rem 1.2rem;
+    border-left: 2px solid var(--gold);
+    background: var(--gold-dim);
+    border-radius: 0 3px 3px 0;
+  }
+  .about-callout-label {
+    font-size: .68rem; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 1.8px;
+    font-weight: 600; margin-bottom: .45rem;
+  }
+  .about-callout p {
+    color: var(--texte-mid);
+    font-size: .9rem; line-height: 1.75;
+    font-weight: 400; margin: 0;
+  }
+
   .tags { display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1.8rem; }
   .tag {
     background: var(--gold-dim);
@@ -372,6 +390,62 @@
     font-size: .7rem; padding: .3rem .9rem;
     border-radius: 2px; font-weight: 500;
     letter-spacing: .3px;
+  }
+
+  /* ─── SECTION RÉFÉRENCES (dark) ──────────────────── */
+  .references-section {
+    background: var(--dark);
+    padding: 4.5rem 6% 5rem;
+    border-top: 1px solid rgba(200,180,138,0.08);
+    border-bottom: 1px solid rgba(200,180,138,0.08);
+  }
+  .references-inner { max-width: 1100px; margin: 0 auto; }
+  .references-header { text-align: center; margin-bottom: 3rem; }
+  .references-header .section-eyebrow { justify-content: center; }
+  .references-title {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+    font-weight: 500;
+    color: var(--blanc-pur);
+    letter-spacing: .2px;
+    margin: 0;
+  }
+  .references-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem 2.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+  .reference-item {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texte);
+    opacity: .55;
+    transition: color .25s, opacity .25s, transform .25s;
+    text-align: center;
+    user-select: none;
+    padding: .4rem .6rem;
+  }
+  .reference-item:hover {
+    color: var(--gold);
+    opacity: 1;
+    transform: translateY(-1px);
+  }
+  /* Placeholder : le jour où l'on passe aux vraies images de logos */
+  .reference-logo {
+    max-width: 140px;
+    max-height: 44px;
+    filter: grayscale(1) brightness(1.2);
+    opacity: .55;
+    transition: .25s;
+  }
+  .reference-logo:hover {
+    filter: none;
+    opacity: 1;
   }
 
   /* ─── SECTION SERVICES (light) ───────────────────── */
@@ -529,6 +603,12 @@
   .footer-logo span { color: var(--gold); }
   .footer-logo svg { flex-shrink: 0; margin-right: .55rem; }
   .footer-text { color: var(--texte); font-size: .78rem; }
+  .footer-link {
+    color: var(--texte-mid);
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .footer-link:hover { color: var(--gold); }
   .footer-loc {
     font-size: .75rem; color: var(--gold);
     font-weight: 500; letter-spacing: .5px;
@@ -541,6 +621,7 @@
     .steps { grid-template-columns: repeat(2, 1fr); }
     .steps::before { display:none; }
     .about-grid { grid-template-columns: 1fr; }
+    .references-grid { grid-template-columns: repeat(3, 1fr); gap: 1.8rem 2rem; }
   }
   @media (max-width: 768px) {
     .about-grid { grid-template-columns:1fr; gap:2.5rem; }
@@ -548,9 +629,12 @@
     .contact-info { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns:1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
+    .references-grid { grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1.6rem; }
+    .reference-item { font-size: .88rem; letter-spacing: 1.5px; }
     .nav-links { display:none; }
     .hero-stats { gap: 2rem; }
     section { padding: 4rem 5%; }
+    .references-section { padding: 3rem 5% 3.5rem; }
     nav { padding: 1.2rem 5%; }
   }
 </style>
@@ -589,6 +673,7 @@
     </svg>NUMEN<span>YS</span></div>
   <ul class="nav-links">
     <li><a class="nav-btn" href="#about">À propos</a></li>
+    <li><a class="nav-btn" href="#references">Références</a></li>
     <li><a class="nav-btn" href="#services">Services</a></li>
     <li><a class="nav-btn" href="#approche">Approche</a></li>
     <li><a class="nav-btn" href="#contact">Contact</a></li>
@@ -603,11 +688,17 @@
 <section id="hero">
   <div class="hero-inner">
     <div class="hero-badge">Conseil Data &amp; Stratégie</div>
-    <h1>Transformez vos données<br>en <em>avantage compétitif</em></h1>
+    <!--
+      Variantes envisagées pour le titre (ne pas supprimer, on peut tester) :
+        - "De la stratégie data à la mise en production, sans rupture."
+        - "Des données qui servent vraiment vos décisions."
+        - "Conseil data indépendant, de la feuille de route à l'exécution."  (retenu — plus sobre)
+    -->
+    <h1>Conseil data indépendant,<br>de la feuille de route à l'exécution.</h1>
     <p>Numenys accompagne les entreprises dans leurs projets data : de la stratégie à l'exécution, du diagnostic à la mise en œuvre opérationnelle.</p>
     <div class="hero-btns">
-      <a href="#services" class="btn-primary">Découvrir les services</a>
-      <a href="#contact" class="btn-outline">Nous contacter</a>
+      <!-- CTA unique : la nav porte déjà "Prendre contact", on utilise un libellé complémentaire -->
+      <a href="#contact" class="btn-primary">Discuter d'un projet</a>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stats">
@@ -639,10 +730,16 @@
     </div>
     <div class="about-text">
       <div class="section-eyebrow">À propos</div>
-      <h2 class="section-title">Conseil expert,<br>approche sur mesure</h2>
-      <p>Numenys est une société de conseil indépendante spécialisée dans la donnée, fondée par Thibaut Picard Destelan.</p>
-      <p>L'intervention s'articule autour de trois axes complémentaires : <strong style="color:var(--blanc-pur); font-weight:500;">expertise data</strong> (analytics, BI, ingénierie et plateforme) ; <strong style="color:var(--blanc-pur); font-weight:500;">conseil stratégique</strong> (gouvernance, diagnostic, feuille de route) ; <strong style="color:var(--blanc-pur); font-weight:500;">management de transition</strong> (pilotage opérationnel, structuration et montée en maturité des équipes).</p>
-      <p>Chaque mission est conduite avec rigueur analytique, sens du business et forte proximité avec les équipes.</p>
+      <h2 class="section-title">Un profil hybride,<br>de la stratégie à la technique</h2>
+      <p>Numenys est une société de conseil indépendante spécialisée dans la donnée, fondée par Thibaut Picard Destelan, qui cumule 10 ans d'expérience en data science, data engineering, BI et data management.</p>
+      <p>Ce parcours terrain — rarement concentré sur un seul profil — permet d'intervenir simultanément sur la <strong style="color:var(--blanc-pur); font-weight:500;">stratégie</strong> (feuille de route, gouvernance), le <strong style="color:var(--blanc-pur); font-weight:500;">pilotage</strong> (management de transition, coordination d'équipe) et l'<strong style="color:var(--blanc-pur); font-weight:500;">exécution technique</strong> (SQL, Python, Power BI, Microsoft Fabric).</p>
+      <p>Chaque mission est conduite avec rigueur analytique, sens du business et proximité forte avec les équipes.</p>
+
+      <div class="about-callout">
+        <div class="about-callout-label">Modèle d'intervention</div>
+        <p>Numenys opère aussi en coordination d'équipe freelance : Thibaut reste l'interlocuteur client unique et garant de la qualité, l'exécution étant assurée par un réseau de freelances séniors mobilisés selon les besoins de la mission.</p>
+      </div>
+
       <div class="tags">
         <span class="tag">Data Analyse</span>
         <span class="tag">Business Intelligence</span>
@@ -651,6 +748,32 @@
         <span class="tag">Pilotage de projets</span>
         <span class="tag">Conseil & Diagnostic</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RÉFÉRENCES ── -->
+<!--
+  Rendu typographique provisoire : remplacer chaque .reference-item
+  par un <img src="logos/xxx.svg" alt="XXX" class="reference-logo"> le jour
+  où les logos officiels sont disponibles (filtre grayscale + hover couleur
+  à prévoir côté CSS).
+-->
+<section id="references" class="dark-section references-section">
+  <div class="references-inner">
+    <div class="references-header">
+      <div class="section-eyebrow" style="justify-content:center;">Références</div>
+      <h2 class="references-title">Ils ont fait confiance à Numenys</h2>
+    </div>
+    <div class="references-grid">
+      <div class="reference-item">Gecina</div>
+      <div class="reference-item">BPCE</div>
+      <div class="reference-item">I3F</div>
+      <div class="reference-item">FFR</div>
+      <div class="reference-item">Groupe Beaumanoir</div>
+      <div class="reference-item">Citya</div>
+      <div class="reference-item">Guy Hoquet</div>
+      <div class="reference-item">IBP</div>
     </div>
   </div>
 </section>
@@ -835,7 +958,10 @@
         <circle cx="19" cy="52" r="3"/>
       </g>
     </svg>NUMEN<span>YS</span></div>
-  <div class="footer-text">© 2026 Numenys — Thibaut Picard Destelan — Conseil Data & Stratégie</div>
+  <div class="footer-text">
+    © 2026 Numenys — Thibaut Picard Destelan — Conseil Data &amp; Stratégie
+    · <a href="mentions-legales.html" class="footer-link">Mentions légales</a>
+  </div>
   <div class="footer-loc">Paris - Tours - France</div>
 </footer>
 
