@@ -35,6 +35,11 @@
   a { color: var(--gold); text-decoration: none; }
   a:hover { text-decoration: underline; }
 
+  .tel-reveal, .tel-link { font:inherit; color:var(--gold); background:none; border:none;
+    padding:0; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+  .tel-link { cursor:auto; text-decoration:none; }
+  .tel-reveal:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+
   nav {
     position: sticky; top:0; z-index:100;
     display:flex; justify-content:space-between; align-items:center;
@@ -157,7 +162,7 @@
     SIRET : 938 918 752 00016<br>
     Siège social : 3 rue de Saint-Malo, 37100 Tours, France<br>
     Email : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a><br>
-    Téléphone : <a href="tel:+33681964770">06 81 96 47 70</a>
+    Téléphone : <button class="tel-reveal" type="button" data-tel-reveal data-reveal-class="tel-link" data-tel-slot>Afficher le numéro</button>
   </p>
 
   <h2>Directeur de la publication</h2>
@@ -180,11 +185,11 @@
     aucun traceur publicitaire et ne pratique aucun profilage.
   </p>
 
-  <h3>Formulaire de contact</h3>
+  <h3>Prise de contact</h3>
   <p>
-    Le formulaire de la page d'accueil collecte trois informations que vous saisissez
-    volontairement : <strong>votre identité</strong> (nom, fonction, société),
-    <strong>votre adresse email</strong> et <strong>la description de votre besoin</strong>.
+    Le site ne comporte aucun formulaire. La prise de contact se fait par email ou par
+    téléphone, à votre initiative. Les seules données traitées sont donc celles que vous
+    choisissez de communiquer dans votre message.
   </p>
   <ul>
     <li><strong>Finalité :</strong> vous répondre et, le cas échéant, établir une proposition
@@ -193,11 +198,8 @@
       précontractuelles prises à votre initiative (article 6.1.b du RGPD).</li>
     <li><strong>Destinataire :</strong> Thibaut Picard Destelan uniquement. Ces données ne sont
       ni cédées, ni vendues, ni utilisées pour de la prospection.</li>
-    <li><strong>Sous-traitant technique :</strong> l'envoi transite par
-      <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>
-      (Formspree, Inc., États-Unis), qui achemine le message vers la boîte email de Numenys.
-      Le transfert hors Union européenne est encadré par les clauses contractuelles types
-      de la Commission européenne.</li>
+    <li><strong>Hébergement des échanges :</strong> la messagerie professionnelle de Numenys.
+      Aucun service tiers de collecte ne s'intercale entre vous et cette boîte.</li>
     <li><strong>Durée de conservation :</strong> trois ans à compter du dernier contact,
       puis suppression.</li>
   </ul>
@@ -224,8 +226,8 @@
 
   <h2>Cookies</h2>
   <p>
-    Aucun cookie n'est déposé par numenys.fr, y compris lors de l'envoi du formulaire de
-    contact. Aucune bannière de consentement n'est donc nécessaire.
+    Aucun cookie n'est déposé par numenys.fr. Aucune bannière de consentement n'est
+    donc nécessaire.
   </p>
 
   <h2>Responsabilité</h2>
@@ -239,6 +241,27 @@
   <div>© 2026 Numenys — Thibaut Picard Destelan</div>
   <a href="index.html">Retour à l'accueil</a>
 </footer>
+
+<script>
+(function () {
+  var enc = 'KzMzNjgxOTY0Nzcw';
+  function local(n) { return ('0' + n.slice(3)).replace(/(\d{2})(?=\d)/g, '$1 '); }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tel-reveal]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var n = atob(enc);
+      var a = document.createElement('a');
+      a.href = 'tel:' + n;
+      a.className = btn.getAttribute('data-reveal-class') || '';
+      while (btn.firstChild) { a.appendChild(btn.firstChild); }
+      var slot = a.querySelector('[data-tel-slot]');
+      if (slot) { slot.textContent = local(n); } else { a.textContent = local(n); }
+      btn.parentNode.replaceChild(a, btn);
+      a.focus();
+    });
+  });
+})();
+</script>
+
 
 </body>
 </html>
