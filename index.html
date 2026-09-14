@@ -657,6 +657,11 @@
   .format-liv b { display:block; font-family:"SFMono-Regular",Consolas,monospace; font-size:.62rem;
     letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:.35rem; }
   .light-section .format-liv b { color:#7a6030; }
+  .format-more { display:inline-block; margin-top:.9rem; font-size:.83rem; font-weight:600;
+                 color:var(--gold); text-decoration:none; border-bottom:1px solid transparent;
+                 transition:border-color .2s ease; }
+  .format-more:hover { border-bottom-color:currentColor; }
+  .light-section .format-more { color:#7a6030; }
 
   .cases-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; max-width:1100px; margin:3rem auto 0; }
   .case-card { border:1px solid var(--card-bord); border-radius:3px; padding:1.7rem 1.7rem 1.8rem;
@@ -790,6 +795,7 @@
       <div class="format-dur">3 à 5 jours en PME et ETI · 3 à 5 semaines en groupe multi-entités</div>
       <div class="service-desc">Fiabilité de vos chiffres de pilotage, cartographie des sources et des flux, exposition RGPD et AI Act, cas d'usage IA classés par valeur et par coût.</div>
       <div class="format-liv"><b>Vous repartez avec</b>Un rapport court, une feuille de route 12 mois chiffrée, une restitution en comité de direction.</div>
+      <a class="format-more" href="diagnostic-data-ia.html">Le détail du diagnostic →</a>
     </div>
     <div class="service-card format-card">
       <div class="format-step">02 · Construire</div>
@@ -992,16 +998,11 @@
   <div class="footer-text">
     © 2026 Numenys — Thibaut Picard Destelan — Conseil Data &amp; IA
     <span class="footer-sep">·</span>
+    <a class="footer-link" href="diagnostic-data-ia.html">Diagnostic Data &amp; IA</a>
+    <span class="footer-sep">·</span>
     <a class="footer-link" href="mentions-legales.html">Mentions légales</a>
   </div>
   <div class="footer-loc">Paris · Tours · France</div>
 </footer>
-
-<script>
-  function go(id) {
-    var el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
-  }
-</script>
 </body>
 </html>
