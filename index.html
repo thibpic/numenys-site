@@ -31,7 +31,6 @@
   "name": "Numenys",
   "description": "Conseil Data & IA pour les directions générales et financières : cadrage, sprint de mise en œuvre, direction data à temps partagé.",
   "url": "https://numenys.fr",
-  "telephone": "+33681964770",
   "email": "thibaut@numenys.fr",
   "priceRange": "$$$",
   "founder": {
@@ -560,12 +559,6 @@
   #contact { background: var(--dark-2); }
 
   .contact-wrap { max-width: 1100px; margin: 0 auto; }
-  .contact-grid {
-    display:flex; justify-content:center;
-    gap: 5rem; align-items:start;
-    margin-top:3rem;
-  }
-
   .contact-info { display:grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .contact-item {
     display:flex; align-items:center; gap:1.1rem;
@@ -632,7 +625,6 @@
   }
   @media (max-width: 768px) {
     .about-grid { grid-template-columns:1fr; gap:2.5rem; }
-    .contact-grid { flex-direction:column; align-items:center; gap:2.5rem; }
     .contact-info { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns:1fr; }
     .steps { grid-template-columns: repeat(2, 1fr); }
@@ -645,7 +637,7 @@
     nav { padding: 1.2rem 5%; }
   }
 
-  /* --- ajouts 2026 : formats, cas, references, formulaire --- */
+  /* --- ajouts 2026 : formats, cas, references, contact --- */
   .format-card { display:flex; flex-direction:column; }
   .format-step { font-family:"SFMono-Regular",Consolas,monospace; font-size:.68rem; letter-spacing:.18em;
     text-transform:uppercase; color:var(--gold); margin-bottom:.7rem; }
@@ -682,17 +674,6 @@
   .ref-line b { color:var(--blanc-pur); font-weight:700; letter-spacing:.02em; }
   .ref-note { max-width:1000px; margin:1.6rem auto 0; font-size:.82rem; color:var(--texte); line-height:1.7; }
 
-  .contact-form { display:grid; gap:1rem; max-width:560px; margin:2.2rem 0 0; }
-  .contact-form label { display:block; font-family:"SFMono-Regular",Consolas,monospace; font-size:.62rem;
-    letter-spacing:.18em; text-transform:uppercase; color:var(--gold); margin-bottom:.4rem; }
-  .contact-form input, .contact-form textarea { width:100%; background:var(--dark-2); color:var(--blanc);
-    border:1px solid var(--card-bord); border-radius:2px; padding:.7rem .85rem; font-family:inherit;
-    font-size:.92rem; line-height:1.5; }
-  .contact-form textarea { min-height:120px; resize:vertical; }
-  .contact-form input:focus, .contact-form textarea:focus { outline:none; border-color:var(--gold-mid); }
-  .contact-form .form-hp { position:absolute; left:-9999px; }
-  .contact-form button { justify-self:start; }
-  .form-legal { font-size:.76rem; color:var(--texte); line-height:1.7; margin-top:.2rem; }
 
   /* pages internes */
   .page-head { padding:9rem 2rem 3.5rem; max-width:820px; margin:0 auto; }
@@ -712,11 +693,14 @@
   .page-back { display:inline-block; margin-top:3rem; font-size:.88rem; color:var(--gold); font-weight:600; }
   .page-cta { margin-top:3.2rem; padding-top:2.2rem; border-top:1px solid var(--card-bord); }
 
-  #contact .contact-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr); gap:3.5rem; align-items:start; }
-  #contact .contact-info { grid-template-columns:1fr; align-content:start; }
+  #contact .contact-info { grid-template-columns:repeat(2,1fr); gap:1rem; max-width:760px; margin:3rem auto 0; }
   #contact .contact-item-value { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  @media (max-width:960px) { .cases-grid { grid-template-columns:repeat(2,1fr); }
-    #contact .contact-grid { grid-template-columns:1fr; gap:2.5rem; } }
+
+  button.contact-item { font:inherit; color:inherit; text-align:left; width:100%; cursor:pointer; }
+  button.contact-item:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+
+  @media (max-width:960px) { .cases-grid { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:620px) { #contact .contact-info { grid-template-columns:1fr; } }
   @media (max-width:768px) { .cases-grid { grid-template-columns:1fr; } .ref-list { grid-template-columns:1fr; gap:0; } }
 </style>
 </head>
@@ -924,30 +908,11 @@
     <h2 class="section-title">Décrivez votre enjeu<br>en trois lignes</h2>
     <p class="section-sub">Je réponds sous 48 h avec un cadrage et un prix. Pas de séquence commerciale, pas de relance automatique.</p>
 
-    <div class="contact-grid">
-      <form class="contact-form" action="https://formspree.io/f/VOTRE_ID" method="POST">
-        <div>
-          <label for="f-nom">Vous</label>
-          <input id="f-nom" name="nom" type="text" required placeholder="Prénom, nom, fonction, société">
-        </div>
-        <div>
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" required placeholder="vous@societe.fr">
-        </div>
-        <div>
-          <label for="f-enjeu">Votre enjeu, en trois lignes</label>
-          <textarea id="f-enjeu" name="enjeu" required placeholder="Ce qui ne va pas aujourd'hui, et ce que vous aimeriez pouvoir faire."></textarea>
-        </div>
-        <input class="form-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn-primary" type="submit">Envoyer</button>
-        <p class="form-legal">Les informations transmises servent uniquement à vous répondre. Elles ne sont ni revendues, ni utilisées pour de la prospection.</p>
-      </form>
-
       <div class="contact-info">
-        <a class="contact-item" href="tel:+33681964770">
+        <button class="contact-item" type="button" data-tel-reveal data-reveal-class="contact-item">
           <div class="contact-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.9.6 2.8a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2z"/></svg></div>
-          <div><div class="contact-item-label">Téléphone</div><div class="contact-item-value">06 81 96 47 70</div></div>
-        </a>
+          <div><div class="contact-item-label">Téléphone</div><div class="contact-item-value" data-tel-slot>Afficher le numéro</div></div>
+        </button>
         <a class="contact-item" href="mailto:thibaut@numenys.fr">
           <div class="contact-item-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></div>
           <div><div class="contact-item-label">Email</div><div class="contact-item-value">thibaut@numenys.fr</div></div>
@@ -961,7 +926,6 @@
           <div><div class="contact-item-label">Malt</div><div class="contact-item-value">thibautpicarddestelan</div></div>
         </a>
       </div>
-    </div>
   </div>
 </section>
 
@@ -1004,5 +968,25 @@
   </div>
   <div class="footer-loc">Paris · Tours · France</div>
 </footer>
+
+<script>
+(function () {
+  var enc = 'KzMzNjgxOTY0Nzcw';
+  function local(n) { return ('0' + n.slice(3)).replace(/(\d{2})(?=\d)/g, '$1 '); }
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tel-reveal]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var n = atob(enc);
+      var a = document.createElement('a');
+      a.href = 'tel:' + n;
+      a.className = btn.getAttribute('data-reveal-class') || '';
+      while (btn.firstChild) { a.appendChild(btn.firstChild); }
+      var slot = a.querySelector('[data-tel-slot]');
+      if (slot) { slot.textContent = local(n); } else { a.textContent = local(n); }
+      btn.parentNode.replaceChild(a, btn);
+      a.focus();
+    });
+  });
+})();
+</script>
 </body>
 </html>
