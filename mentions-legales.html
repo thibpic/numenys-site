@@ -143,7 +143,10 @@
     nav { padding: 1rem 5%; }
     footer { padding: 1.5rem 5%; font-size: .72rem; }
   }
-</style>
+
+    h3 { font-size: 1.02rem; font-weight: 700; color: var(--blanc-pur, #f8f6f2);
+         margin: 1.9rem 0 .6rem; letter-spacing: -.005em; }
+  </style>
 </head>
 <body>
 
@@ -159,14 +162,13 @@
   <h2>Éditeur du site</h2>
   <p>
     <strong>Numenys</strong><br>
-    Forme juridique : <span class="placeholder">[forme juridique]</span>
-    <!-- À compléter par Thibaut : SAS, SASU, EURL, EI, micro-entreprise, etc. -->
-    <br>
+    Forme juridique : SARL<br>
+    SIREN : 938 918 752<br>
     SIRET : <span class="placeholder">[SIRET]</span>
-    <!-- À compléter par Thibaut : 14 chiffres -->
+    <!-- À compléter par Thibaut : 14 chiffres, soit le SIREN suivi du NIC de l'établissement -->
     <br>
     Siège social : <span class="placeholder">[adresse]</span>
-    <!-- À compléter par Thibaut : adresse postale complète -->
+    <!-- À compléter par Thibaut : adresse postale complète du siège -->
     <br>
     Email : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a><br>
     Téléphone : <a href="tel:+33681964770">06 81 96 47 70</a>
@@ -177,12 +179,9 @@
 
   <h2>Hébergeur</h2>
   <p>
-    <span class="placeholder">[hébergeur]</span>
-    <!--
-      À compléter par Thibaut : nom de l'hébergeur + adresse + téléphone.
-      Ex. GitHub Pages : GitHub, Inc., 88 Colin P Kelly Jr St,
-      San Francisco, CA 94107, United States.
-    -->
+    GitHub Pages, service de <strong>GitHub, Inc.</strong><br>
+    88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
+    <a href="https://github.com" target="_blank" rel="noopener">github.com</a>
   </p>
 
   <h2>Propriété intellectuelle</h2>
@@ -190,21 +189,58 @@
   <p>Les noms et marques cités dans la section « Références » restent la propriété de leurs détenteurs respectifs et sont mentionnés à titre illustratif des missions menées.</p>
 
   <h2>Données personnelles &amp; RGPD</h2>
-  <p>Le site numenys.fr est un site vitrine statique. Il ne collecte <strong>aucune donnée personnelle</strong> de manière automatisée :</p>
+  <p>
+    Le site numenys.fr est un site vitrine statique. Il ne dépose aucun cookie, n'utilise
+    aucun traceur publicitaire et ne pratique aucun profilage.
+  </p>
+
+  <h3>Formulaire de contact</h3>
+  <p>
+    Le formulaire de la page d'accueil collecte trois informations que vous saisissez
+    volontairement : <strong>votre identité</strong> (nom, fonction, société),
+    <strong>votre adresse email</strong> et <strong>la description de votre besoin</strong>.
+  </p>
   <ul>
-    <li>aucun formulaire de contact en ligne (les échanges se font par email <code>mailto:</code>, téléphone ou via les plateformes tierces LinkedIn et Malt) ;</li>
-    <li>aucun outil d'analyse d'audience (pas de Google Analytics, Matomo ou équivalent) ;</li>
-    <li>aucun cookie non essentiel n'est déposé sur votre appareil ;</li>
-    <li>aucun pixel de suivi ni traceur publicitaire.</li>
+    <li><strong>Finalité :</strong> vous répondre et, le cas échéant, établir une proposition
+      d'intervention. Aucune autre utilisation.</li>
+    <li><strong>Base légale :</strong> votre demande explicite, qui relève des mesures
+      précontractuelles prises à votre initiative (article 6.1.b du RGPD).</li>
+    <li><strong>Destinataire :</strong> Thibaut Picard Destelan uniquement. Ces données ne sont
+      ni cédées, ni vendues, ni utilisées pour de la prospection.</li>
+    <li><strong>Sous-traitant technique :</strong> l'envoi transite par
+      <a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a>
+      (Formspree, Inc., États-Unis), qui achemine le message vers la boîte email de Numenys.
+      Le transfert hors Union européenne est encadré par les clauses contractuelles types
+      de la Commission européenne.</li>
+    <li><strong>Durée de conservation :</strong> trois ans à compter du dernier contact,
+      puis suppression.</li>
   </ul>
-  <p>Les seules données échangées avec Numenys sont celles que vous transmettez volontairement par email (<a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>). Elles sont utilisées exclusivement pour répondre à votre sollicitation et ne sont ni cédées, ni vendues à des tiers.</p>
-  <p>Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit d'accès, de rectification, d'effacement et d'opposition sur les données qui vous concernent. Pour l'exercer, contactez : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>.</p>
+
+  <h3>Mesure d'audience</h3>
+  <p>
+    Aucun outil de mesure d'audience n'est installé à ce jour : ni Google Analytics,
+    ni Matomo, ni équivalent. Si un outil sans cookie venait à être ajouté, cette page
+    serait mise à jour avant sa mise en service.
+  </p>
+
+  <h3>Vos droits</h3>
+  <p>
+    Conformément au RGPD et à la loi « Informatique et Libertés », vous disposez d'un droit
+    d'accès, de rectification, d'effacement, de limitation et d'opposition sur les données qui
+    vous concernent. Pour l'exercer, écrivez à
+    <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a> : la demande est traitée sous
+    un mois. Vous pouvez également introduire une réclamation auprès de la
+    <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
+  </p>
 
   <h2>Ressources tierces</h2>
   <p>Le site charge la police de caractères <strong>Raleway</strong> depuis Google Fonts (fonts.googleapis.com, fonts.gstatic.com). Cette requête peut transmettre votre adresse IP et votre user-agent à Google, le temps du chargement des fichiers de police. Aucun cookie n'est déposé par ce biais.</p>
 
   <h2>Cookies</h2>
-  <p>Aucun cookie n'est utilisé sur numenys.fr. Aucune bannière de consentement n'est donc nécessaire.</p>
+  <p>
+    Aucun cookie n'est déposé par numenys.fr, y compris lors de l'envoi du formulaire de
+    contact. Aucune bannière de consentement n'est donc nécessaire.
+  </p>
 
   <h2>Responsabilité</h2>
   <p>Numenys s'efforce de maintenir les informations de ce site à jour et exactes, mais ne peut garantir l'absence d'erreurs ou d'omissions. L'utilisation du site se fait sous la seule responsabilité de l'utilisateur.</p>
