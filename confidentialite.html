@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidentialité – Numenys</title>
+<meta name="description" content="Comment Numenys utilise les données professionnelles des personnes qu'elle contacte pour sa prospection, et comment s'y opposer.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://numenys.fr/confidentialite">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:       #14161a;
+    --dark-2:     #1c1f26;
+    --dark-3:     #252931;
+    --gold:       #c8b48a;
+    --blanc:      #ede9e1;
+    --blanc-pur:  #f8f6f2;
+    --texte:      #8a8a7e;
+    --texte-mid:  #aaa9a0;
+    --card-bord:  rgba(200,180,138,0.16);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Raleway', system-ui, sans-serif;
+    background: var(--dark);
+    color: var(--blanc);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .tel-reveal, .tel-link { font:inherit; color:var(--gold); background:none; border:none;
+    padding:0; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+  .tel-link { cursor:auto; text-decoration:none; }
+  .tel-reveal:focus-visible { outline:2px solid var(--gold); outline-offset:2px; }
+
+  nav {
+    position: sticky; top:0; z-index:100;
+    display:flex; justify-content:space-between; align-items:center;
+    padding: 1.2rem 6%;
+    background: rgba(20,22,26,0.9);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(200,180,138,0.12);
+  }
+  .logo {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem; font-weight: 600;
+    letter-spacing: 2px; color: var(--blanc-pur);
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--gold); }
+  .back-link {
+    font-size: .85rem;
+    color: var(--texte-mid);
+    letter-spacing: .3px;
+  }
+  .back-link:hover { color: var(--blanc-pur); text-decoration:none; }
+
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 4rem 6% 6rem;
+  }
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    font-weight: 600;
+    color: var(--blanc-pur);
+    margin-bottom: .5rem;
+    letter-spacing: -.3px;
+  }
+  .subtitle {
+    font-size: .9rem;
+    color: var(--gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--blanc-pur);
+    margin: 2.5rem 0 .9rem;
+    letter-spacing: .1px;
+  }
+  h2::before {
+    content:''; display:inline-block;
+    width: 20px; height: 1px;
+    background: var(--gold);
+    vertical-align: middle;
+    margin-right: .7rem;
+    opacity: .8;
+  }
+
+  p, li {
+    color: var(--texte-mid);
+    font-size: .93rem;
+    margin-bottom: .8rem;
+  }
+  ul { list-style: none; padding: 0; }
+  ul li {
+    padding: .35rem 0 .35rem 1rem;
+    position: relative;
+  }
+  ul li::before {
+    content: '·';
+    position: absolute; left: 0;
+    color: var(--gold);
+  }
+  strong {
+    color: var(--blanc-pur);
+    font-weight: 500;
+  }
+
+  footer {
+    border-top: 1px solid rgba(200,180,138,0.1);
+    padding: 1.8rem 6%;
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap: 1rem;
+    font-size: .78rem;
+    color: var(--texte);
+  }
+  footer a { color: var(--texte-mid); }
+
+  @media (max-width: 640px) {
+    main { padding: 2.5rem 6% 4rem; }
+    nav { padding: 1rem 5%; }
+    footer { padding: 1.5rem 5%; font-size: .72rem; }
+  }
+
+    h3 { font-size: 1.02rem; font-weight: 700; color: var(--blanc-pur, #f8f6f2);
+         margin: 1.9rem 0 .6rem; letter-spacing: -.005em; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo" style="text-decoration:none;">NUMEN<span>YS</span></a>
+  <a href="index.html" class="back-link">← Retour à l'accueil</a>
+</nav>
+
+<main>
+  <h1>Confidentialité</h1>
+  <p class="subtitle">Données utilisées pour la prospection</p>
+
+  <p>
+    Vous lisez cette page parce que Numenys vous a écrit sans que vous l'ayez sollicité, par
+    email ou sur LinkedIn. Elle explique d'où viennent vos coordonnées, ce que nous en faisons
+    et comment ne plus être contacté. Pour les visiteurs du site, la politique de
+    confidentialité figure dans les <a href="mentions-legales.html">mentions légales</a>.
+  </p>
+
+  <h2>Responsable du traitement</h2>
+  <p>
+    <strong>Numenys</strong>, SARL immatriculée sous le SIREN 938 918 752, représentée par
+    Thibaut Picard Destelan, gérant.<br>
+    Contact : <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>
+  </p>
+
+  <h2>Données concernées</h2>
+  <p>Uniquement des données professionnelles :</p>
+  <ul>
+    <li>vos nom et prénom ;</li>
+    <li>votre fonction et votre entreprise ;</li>
+    <li>votre adresse email professionnelle ou votre profil LinkedIn ;</li>
+    <li>l'historique de nos échanges (date du contact, réponse éventuelle).</li>
+  </ul>
+  <p>Aucune donnée sensible, aucune donnée personnelle hors du cadre professionnel.</p>
+
+  <h2>Sources</h2>
+  <p>
+    Ces informations proviennent de sources publiques ou que vous avez rendues publiques :
+    votre profil LinkedIn, le site de votre entreprise, la presse professionnelle, les
+    annonces publiées par votre entreprise, ou une mise en relation par une personne de
+    notre réseau commun.
+  </p>
+
+  <h2>Finalité et base légale</h2>
+  <ul>
+    <li><strong>Finalité :</strong> vous présenter les services de conseil data et IA de
+      Numenys lorsqu'ils peuvent concerner votre fonction, et assurer le suivi de nos
+      échanges.</li>
+    <li><strong>Base légale :</strong> l'intérêt légitime de Numenys à faire connaître son
+      activité auprès de professionnels concernés (article 6.1.f du RGPD). Les messages sont
+      envoyés à titre individuel, à votre adresse professionnelle, et portent sur votre
+      métier.</li>
+  </ul>
+
+  <h2>Destinataires</h2>
+  <p>
+    Thibaut Picard Destelan uniquement. Vos données ne sont ni cédées, ni louées, ni vendues,
+    ni partagées avec des partenaires commerciaux.
+  </p>
+
+  <h2>Durée de conservation</h2>
+  <p>
+    Trois ans à compter de notre dernier échange, puis suppression. Si vous vous opposez à la
+    prospection, vos coordonnées sont supprimées ; seuls vos nom et adresse sont conservés
+    dans une liste d'opposition, afin de ne plus jamais vous écrire.
+  </p>
+
+  <h2>Vos droits</h2>
+  <p>
+    Vous pouvez vous opposer à tout moment, sans motif, à recevoir nos messages : il suffit
+    de répondre « stop » au message reçu, ou d'écrire à
+    <a href="mailto:thibaut@numenys.fr">thibaut@numenys.fr</a>.
+  </p>
+  <p>
+    Vous disposez aussi d'un droit d'accès, de rectification, d'effacement et de limitation
+    sur les données qui vous concernent. Les demandes sont traitées sous un mois. Vous pouvez
+    également introduire une réclamation auprès de la
+    <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>.
+  </p>
+
+  <p style="margin-top:2.5rem; font-size:.82rem; color:var(--texte);">Dernière mise à jour : 12 octobre 2026.</p>
+</main>
+
+<footer>
+  <div>© 2026 Numenys — Thibaut Picard Destelan</div>
+  <a href="index.html">Retour à l'accueil</a>
+</footer>
+
+
+
+</body>
+</html>
