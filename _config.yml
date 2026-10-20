@@ -1,0 +1,3 @@
+# GitHub Pages : les notes de travail du dépôt ne sont pas publiées sur numenys.fr.
+exclude:
+  - CLAUDE.md
